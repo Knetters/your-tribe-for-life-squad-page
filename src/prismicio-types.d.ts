@@ -129,6 +129,16 @@ export interface BoekenSliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   url: prismic.LinkField;
+
+  /**
+   * color field in *Boeken → Items*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boeken.items[].color
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  color: prismic.SelectField<"1" | "2" | "3" | "4" | "5" | "6">;
 }
 
 /**

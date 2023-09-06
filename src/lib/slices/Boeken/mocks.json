@@ -30,6 +30,14 @@
 								"url": "http://google.com"
 							}
 						}
+					],
+					[
+						"color",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "6",
+							"type": "Select"
+						}
 					]
 				]
 			}
