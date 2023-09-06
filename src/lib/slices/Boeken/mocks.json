@@ -35,7 +35,7 @@
 						"color",
 						{
 							"__TYPE__": "FieldContent",
-							"value": "6",
+							"value": "red",
 							"type": "Select"
 						}
 					]

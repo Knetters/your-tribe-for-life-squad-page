@@ -138,7 +138,9 @@ export interface BoekenSliceDefaultItem {
    * - **API ID Path**: boeken.items[].color
    * - **Documentation**: https://prismic.io/docs/field#select
    */
-  color: prismic.SelectField<"1" | "2" | "3" | "4" | "5" | "6">;
+  color: prismic.SelectField<
+    "red" | "blue" | "green" | "yellow" | "purple" | "brown"
+  >;
 }
 
 /**
