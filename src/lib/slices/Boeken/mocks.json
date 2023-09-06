@@ -15,7 +15,7 @@
 								{
 									"type": "paragraph",
 									"content": {
-										"text": "Est quis ipsum ullamco. Nostrud est cupidatat magna est ipsum eu aliquip adipisicing consectetur minim enim occaecat enim. Id id irure aliquip do quis id tempor ea adipisicing aliquip voluptate ipsum tempor excepteur."
+										"text": "Aliquip occaecat cupidatat ullamco laboris enim exercitation id nisi."
 									}
 								}
 							]
@@ -27,7 +27,7 @@
 							"__TYPE__": "LinkContent",
 							"value": {
 								"__TYPE__": "ExternalLink",
-								"url": "http://twitter.com"
+								"url": "http://google.com"
 							}
 						}
 					]
