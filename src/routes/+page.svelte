@@ -16,3 +16,11 @@
     </pre>
     
   </section>
+
+  <style>
+    pre {
+      background-color: #240a6d;
+      color: #7ddd90;
+      padding: 1rem;
+    }
+  </style>
