@@ -18,6 +18,10 @@ Data uit prismic:
 </section>
 
 <style>
+  section {
+    padding: 0rem .5rem;
+  }
+
   pre {
     background-color: #240a6d;
     color: #7ddd90;
