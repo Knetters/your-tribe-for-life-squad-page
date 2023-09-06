@@ -1,0 +1,38 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"title",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Est quis ipsum ullamco. Nostrud est cupidatat magna est ipsum eu aliquip adipisicing consectetur minim enim occaecat enim. Id id irure aliquip do quis id tempor ea adipisicing aliquip voluptate ipsum tempor excepteur."
+									}
+								}
+							]
+						}
+					],
+					[
+						"url",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "http://twitter.com"
+							}
+						}
+					]
+				]
+			}
+		]
+	}
+]
