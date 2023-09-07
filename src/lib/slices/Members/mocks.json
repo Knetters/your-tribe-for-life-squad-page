@@ -30,6 +30,20 @@
 								"url": "https://slicemachine.dev"
 							}
 						}
+					],
+					[
+						"role",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Do excepteur dolore labore sunt ipsum occaecat sint in minim veniam reprehenderit non deserunt est labore. Elit amet velit incididunt esse veniam veniam aliqua aliquip laborum est dolore pariatur non."
+									}
+								}
+							]
+						}
 					]
 				]
 			}

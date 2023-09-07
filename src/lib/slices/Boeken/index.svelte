@@ -7,7 +7,7 @@
 
   <div class="bookshelf">
     {#each slice.items as item (item.slug.text)}
-      <a href=/{item.slug[0].text}>
+      <a href={`book/${item.slug[0].text}`}>
         <div class="book book-{item.color}">
           <h2>{item.title[0].text}</h2>
         </div>

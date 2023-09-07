@@ -4,6 +4,58 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
+type BookDocumentDataSlicesSlice = MembersSlice;
+
+/**
+ * Content for book documents
+ */
+interface BookDocumentData {
+  /**
+   * title field in *book*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.TitleField;
+
+  /**
+   * content field in *book*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book.content
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  content: prismic.RichTextField;
+
+  /**
+   * Slice Zone field in *book*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: book.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<BookDocumentDataSlicesSlice>;
+}
+
+/**
+ * book document from Prismic
+ *
+ * - **API ID**: `book`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type BookDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<BookDocumentData>, "book", Lang>;
+
 /**
  * Item in *home → boeken*
  */
@@ -208,7 +260,7 @@ export type YearbookDocument<Lang extends string = string> =
     Lang
   >;
 
-export type AllDocumentTypes = HomeDocument | YearbookDocument;
+export type AllDocumentTypes = BookDocument | HomeDocument | YearbookDocument;
 
 /**
  * Primary content in *Boeken → Items*
@@ -297,6 +349,16 @@ export interface MembersSliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   url: prismic.LinkField;
+
+  /**
+   * role field in *Members → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: members.items[].role
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  role: prismic.RichTextField;
 }
 
 /**
@@ -339,6 +401,9 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
+      BookDocument,
+      BookDocumentData,
+      BookDocumentDataSlicesSlice,
       HomeDocument,
       HomeDocumentData,
       HomeDocumentDataBoekenItem,

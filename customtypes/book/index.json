@@ -1,0 +1,46 @@
+{
+  "id": "book",
+  "label": "book",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading1"
+        }
+      },
+      "content": {
+        "type": "StructuredText",
+        "config": {
+          "label": "content",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,heading2,o-list-item,list-item,hyperlink,strong,em"
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "members": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}
