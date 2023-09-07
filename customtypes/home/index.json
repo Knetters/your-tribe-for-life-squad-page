@@ -31,13 +31,6 @@
           "single": "paragraph,hyperlink,heading2,list-item,o-list-item,strong,em"
         }
       },
-      "boeken": {
-        "type": "Group",
-        "config": {
-          "label": "boeken",
-          "fields": {}
-        }
-      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

@@ -56,11 +56,6 @@ interface BookDocumentData {
 export type BookDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<BookDocumentData>, "book", Lang>;
 
-/**
- * Item in *home → boeken*
- */
-export interface HomeDocumentDataBoekenItem {}
-
 type HomeDocumentDataSlicesSlice = BoekenSlice;
 
 /**
@@ -88,17 +83,6 @@ interface HomeDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   content: prismic.RichTextField;
-
-  /**
-   * boeken field in *home*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: home.boeken[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  boeken: prismic.GroupField<Simplify<HomeDocumentDataBoekenItem>>;
 
   /**
    * Slice Zone field in *home*
@@ -156,11 +140,6 @@ interface HomeDocumentData {
 export type HomeDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<HomeDocumentData>, "home", Lang>;
 
-/**
- * Item in *yearbook → members*
- */
-export interface YearbookDocumentDataMembersItem {}
-
 type YearbookDocumentDataSlicesSlice = MembersSlice;
 
 /**
@@ -188,17 +167,6 @@ interface YearbookDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   content: prismic.RichTextField;
-
-  /**
-   * members field in *yearbook*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: yearbook.members[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  members: prismic.GroupField<Simplify<YearbookDocumentDataMembersItem>>;
 
   /**
    * Slice Zone field in *yearbook*
@@ -406,11 +374,9 @@ declare module "@prismicio/client" {
       BookDocumentDataSlicesSlice,
       HomeDocument,
       HomeDocumentData,
-      HomeDocumentDataBoekenItem,
       HomeDocumentDataSlicesSlice,
       YearbookDocument,
       YearbookDocumentData,
-      YearbookDocumentDataMembersItem,
       YearbookDocumentDataSlicesSlice,
       AllDocumentTypes,
       BoekenSlice,

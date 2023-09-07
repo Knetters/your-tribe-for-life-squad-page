@@ -30,13 +30,6 @@
           "single": "paragraph,heading2,strong,em,hyperlink,list-item,o-list-item"
         }
       },
-      "members": {
-        "type": "Group",
-        "config": {
-          "label": "members",
-          "fields": {}
-        }
-      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
