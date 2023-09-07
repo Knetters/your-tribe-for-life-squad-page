@@ -7,6 +7,8 @@
   <section>
     <h1>{data.title[0].text}</h1>
     <p>{data.content[0].text}</p>
+
+    <hr>
     
     <SliceZone slices={data.slices} {components} />
   
