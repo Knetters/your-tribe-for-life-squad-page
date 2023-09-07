@@ -19,7 +19,7 @@ const routes = [
     type: "home",
     uid: "homepage",
     path: "/",
-  },
+  }
   // {
   //   type: "page",
   //   path: "/",

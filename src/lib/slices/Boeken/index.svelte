@@ -8,7 +8,7 @@
   <div class="bookshelf">
     {#each slice.items as item (item.slug.text)}
       <div class="book book-{item.color}">
-        <a href={item.slug.text} target="_blank"><h2>{item.title[0].text}</h2></a>
+        <a href=/{item.slug[0].text}><h2>{item.title[0].text}</h2></a>
       </div>
     {/each}
   </div>
