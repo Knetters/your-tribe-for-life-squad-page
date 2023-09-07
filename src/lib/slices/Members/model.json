@@ -1,0 +1,36 @@
+{
+  "id": "members",
+  "type": "SharedSlice",
+  "name": "Members",
+  "description": "Members",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "name": {
+          "type": "StructuredText",
+          "config": {
+            "label": "name",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,heading3"
+          }
+        },
+        "url": {
+          "type": "Link",
+          "config": {
+            "label": "url",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      }
+    }
+  ]
+}

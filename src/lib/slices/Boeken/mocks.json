@@ -22,21 +22,25 @@
 						}
 					],
 					[
-						"url",
-						{
-							"__TYPE__": "LinkContent",
-							"value": {
-								"__TYPE__": "ExternalLink",
-								"url": "http://google.com"
-							}
-						}
-					],
-					[
 						"color",
 						{
 							"__TYPE__": "FieldContent",
 							"value": "red",
 							"type": "Select"
+						}
+					],
+					[
+						"slug",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Cillum incididunt anim reprehenderit officia irure commodo reprehenderit mollit in adipisicing ea duis."
+									}
+								}
+							]
 						}
 					]
 				]

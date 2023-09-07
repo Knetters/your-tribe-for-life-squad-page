@@ -6,9 +6,9 @@
 <section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
 
   <div class="bookshelf">
-    {#each slice.items as item (item.url.url)}
+    {#each slice.items as item (item.slug.text)}
       <div class="book book-{item.color}">
-        <a href={item.url.url} target="_blank"><h2>{item.title[0].text}</h2></a>
+        <a href={item.slug.text} target="_blank"><h2>{item.title[0].text}</h2></a>
       </div>
     {/each}
   </div>
@@ -82,7 +82,7 @@
   }
 
   .book h2 {
-    padding: 0;
+    padding-top: .4rem;
     font-size: 1em;
     transform-origin: 0% 0%;
     transform: rotate(0.25turn) translateY(-35px);

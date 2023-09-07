@@ -22,14 +22,6 @@
             "single": "paragraph,heading2,heading3,heading4"
           }
         },
-        "url": {
-          "type": "Link",
-          "config": {
-            "label": "url",
-            "placeholder": "",
-            "select": null
-          }
-        },
         "color": {
           "type": "Select",
           "config": {
@@ -43,6 +35,15 @@
               "purple",
               "brown"
             ]
+          }
+        },
+        "slug": {
+          "type": "StructuredText",
+          "config": {
+            "label": "slug",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
           }
         }
       }

@@ -104,7 +104,111 @@ interface HomeDocumentData {
 export type HomeDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<HomeDocumentData>, "home", Lang>;
 
-export type AllDocumentTypes = HomeDocument;
+/**
+ * Item in *yearbook → members*
+ */
+export interface YearbookDocumentDataMembersItem {}
+
+type YearbookDocumentDataSlicesSlice = MembersSlice;
+
+/**
+ * Content for yearbook documents
+ */
+interface YearbookDocumentData {
+  /**
+   * title field in *yearbook*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: yearbook.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.TitleField;
+
+  /**
+   * content field in *yearbook*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: yearbook.content
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  content: prismic.RichTextField;
+
+  /**
+   * members field in *yearbook*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: yearbook.members[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  members: prismic.GroupField<Simplify<YearbookDocumentDataMembersItem>>;
+
+  /**
+   * Slice Zone field in *yearbook*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: yearbook.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<YearbookDocumentDataSlicesSlice>
+  /**
+   * Meta Description field in *yearbook*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: yearbook.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *yearbook*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: yearbook.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+
+  /**
+   * Meta Title field in *yearbook*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: yearbook.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_title: prismic.KeyTextField;
+}
+
+/**
+ * yearbook document from Prismic
+ *
+ * - **API ID**: `yearbook`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type YearbookDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<YearbookDocumentData>,
+    "yearbook",
+    Lang
+  >;
+
+export type AllDocumentTypes = HomeDocument | YearbookDocument;
 
 /**
  * Primary content in *Boeken → Items*
@@ -121,16 +225,6 @@ export interface BoekenSliceDefaultItem {
   title: prismic.RichTextField;
 
   /**
-   * url field in *Boeken → Items*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: boeken.items[].url
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  url: prismic.LinkField;
-
-  /**
    * color field in *Boeken → Items*
    *
    * - **Field Type**: Select
@@ -141,6 +235,16 @@ export interface BoekenSliceDefaultItem {
   color: prismic.SelectField<
     "red" | "blue" | "green" | "yellow" | "purple" | "brown"
   >;
+
+  /**
+   * slug field in *Boeken → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boeken.items[].slug
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  slug: prismic.RichTextField;
 }
 
 /**
@@ -170,6 +274,61 @@ type BoekenSliceVariation = BoekenSliceDefault;
  */
 export type BoekenSlice = prismic.SharedSlice<"boeken", BoekenSliceVariation>;
 
+/**
+ * Primary content in *Members → Items*
+ */
+export interface MembersSliceDefaultItem {
+  /**
+   * name field in *Members → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: members.items[].name
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  name: prismic.RichTextField;
+
+  /**
+   * url field in *Members → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: members.items[].url
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  url: prismic.LinkField;
+}
+
+/**
+ * Default variation for Members Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MembersSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  Simplify<MembersSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Members*
+ */
+type MembersSliceVariation = MembersSliceDefault;
+
+/**
+ * Members Shared Slice
+ *
+ * - **API ID**: `members`
+ * - **Description**: Members
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MembersSlice = prismic.SharedSlice<
+  "members",
+  MembersSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -184,11 +343,19 @@ declare module "@prismicio/client" {
       HomeDocumentData,
       HomeDocumentDataBoekenItem,
       HomeDocumentDataSlicesSlice,
+      YearbookDocument,
+      YearbookDocumentData,
+      YearbookDocumentDataMembersItem,
+      YearbookDocumentDataSlicesSlice,
       AllDocumentTypes,
       BoekenSlice,
       BoekenSliceDefaultItem,
       BoekenSliceVariation,
       BoekenSliceDefault,
+      MembersSlice,
+      MembersSliceDefaultItem,
+      MembersSliceVariation,
+      MembersSliceDefault,
     };
   }
 }
