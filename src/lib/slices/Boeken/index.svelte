@@ -7,9 +7,11 @@
 
   <div class="bookshelf">
     {#each slice.items as item (item.slug.text)}
-      <div class="book book-{item.color}">
-        <a href=/{item.slug[0].text}><h2>{item.title[0].text}</h2></a>
-      </div>
+      <a href=/{item.slug[0].text}>
+        <div class="book book-{item.color}">
+          <h2>{item.title[0].text}</h2>
+        </div>
+      </a>
     {/each}
   </div>
 
@@ -87,10 +89,10 @@
     transform-origin: 0% 0%;
     transform: rotate(0.25turn) translateY(-35px);
     width: 170px;
+    color: #e7dd71;
   }
 
   a {
-    color: #e7dd71;
     text-decoration: none;
   }
 </style>
