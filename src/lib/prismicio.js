@@ -20,10 +20,6 @@ const routes = [
     uid: "homepage",
     path: "/",
   }
-  // {
-  //   type: "page",
-  //   path: "/",
-  // },
 ];
 
 /**
