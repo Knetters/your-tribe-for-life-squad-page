@@ -21,8 +21,8 @@ const routes = [
     path: "/",
   },
   {
-    type: "book", // Add a route for the "book" custom type
-    path: "/book/:uid", // Define the path pattern for individual book pages
+    type: "yearbook",
+    path: "/book/:uid",
   }
 ];
 
