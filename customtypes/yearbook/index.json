@@ -30,6 +30,14 @@
           "single": "paragraph,heading2,strong,em,hyperlink,list-item,o-list-item"
         }
       },
+      "color": {
+        "type": "Select",
+        "config": {
+          "label": "color",
+          "placeholder": "",
+          "options": ["red", "blue", "green", "yellow", "purple", "brown"]
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

@@ -90,7 +90,7 @@
     display: none;
   }
   .cover, .back-cover {
-    background-color: #a55241;
+    background-color: #a13030;
     width: 100%;
     height: 100%;
     border-radius: 0 5px 5px 0;

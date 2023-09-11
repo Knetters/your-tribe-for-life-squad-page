@@ -169,6 +169,19 @@ interface YearbookDocumentData {
   content: prismic.RichTextField;
 
   /**
+   * color field in *yearbook*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: yearbook.color
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  color: prismic.SelectField<
+    "red" | "blue" | "green" | "yellow" | "purple" | "brown"
+  >;
+
+  /**
    * Slice Zone field in *yearbook*
    *
    * - **Field Type**: Slice Zone
