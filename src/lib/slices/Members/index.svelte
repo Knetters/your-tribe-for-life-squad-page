@@ -30,6 +30,15 @@
                 <div class="card-item">test</div>
                 <div class="card-item">test</div>
                 <div class="card-item">test</div>
+                <div class="card-item">test</div>
+                <div class="card-item">test</div>
+                <div class="card-item">test</div>
+                <div class="card-item">test</div>
+                <div class="card-item">test</div>
+                <div class="card-item">test</div>
+                <div class="card-item">test</div>
+                <div class="card-item">test</div>
+                <div class="card-item">test</div>
               </div>
                 <label class="next" for="checkbox-page1">Verder</label>
             </div>
@@ -92,6 +101,7 @@
 .card-item {
     background: #bdbdbd;
     margin: .35%;
+    height: 10rem;
     flex: 0 1 calc(20% - .7%); /* <-- adjusting for margin */
     width: calc(20% - .7%);
 }
