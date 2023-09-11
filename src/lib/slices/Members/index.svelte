@@ -14,7 +14,7 @@
     
     <div class="book">
         <div class="cover">
-            <label for="checkbox-cover"></label>
+          <label for="checkbox-cover"></label>
         </div>
         <div class="page" id="page1">
             <div class="front-page">
@@ -25,7 +25,16 @@
                     <!-- Skip items that have already been rendered -->
                   {:else if index < currentItemIndex + 20}
                     <!-- Render the next 20 items -->
-                    <div class="card-item">{item.name[0].text}</div>
+                    <div class="card-item">
+                      <div class="inner-card">
+                        {#if !item.image.url}
+                          <img class="yearbook-image" src="/img/placeholder-image.jpg" alt="" />
+                        {:else}
+                          <img class="yearbook-image" src={item.image.url} alt={item.image.alt} />
+                        {/if}
+                          <p>{item.name[0].text}</p>
+                      </div>
+                    </div>
                   {/if}
                 {/each}
               </div>
@@ -96,8 +105,16 @@
     width: calc(20% - .7%);
   }
 
+  .card-item p {
+    font-size: .7rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
   .yearbook-image {
-    width: 200px;
+    width: 86%;
+    margin-left: 7%;
   }
 
   /* Styling and logic yearbook */
@@ -131,6 +148,7 @@
     align-items: center;
     justify-content: center;
     transform-origin: center left;
+
   }
 
   .cover {
