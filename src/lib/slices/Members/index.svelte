@@ -102,7 +102,7 @@
   .card-item {
     background: #c6c6c6;
     margin: .35%;
-    height: 10rem;
+    height: 18vh;
     flex: 0 1 calc(20% - .7%);
     width: calc(20% - .7%);
   }
