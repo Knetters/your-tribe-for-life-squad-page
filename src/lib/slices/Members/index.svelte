@@ -79,6 +79,7 @@
     align-items: center;
     justify-content: center;
   }
+
   .book {
     width: 35vw;
     height: 90vh;
@@ -86,10 +87,13 @@
     transition-duration: 1s;
     perspective: 1500;
   }
+
   input {
     display: none;
   }
-  .cover, .back-cover {
+
+  .cover,
+  .back-cover {
     background-color: #a13030;
     width: 100%;
     height: 100%;
@@ -100,20 +104,24 @@
     justify-content: center;
     transform-origin: center left;
   }
+
   .cover {
     position: absolute;
     z-index: 5;
-    transition: transform .5s;
+    transition: transform 0.5s;
   }
+
   .cover label {
     width: 100%;
     height: 100%;
     cursor: pointer;
   }
+
   .back-cover {
     position: relative;
     z-index: -1;
   }
+
   .page {
     position: absolute;
     background-color: #f2f2f2;
@@ -124,7 +132,7 @@
     transform-origin: left;
     transform-style: preserve-3d;
     transform: rotateY(0deg);
-    transition-duration: .5s;
+    transition-duration: 0.5s;
   }
 
   .front-page {
@@ -135,6 +143,7 @@
     box-sizing: border-box;
     padding: 1rem;
   }
+
   .back-page {
     transform: rotateY(180deg);
     position: absolute;
@@ -143,50 +152,66 @@
     backface-visibility: hidden;
     z-index: 99;
   }
-  .next, .prev {
+
+  .next,
+  .prev {
     position: absolute;
     bottom: 1em;
     cursor: pointer;
   }
+
   .next {
     right: 1em;
   }
+
   .prev {
     left: 1em;
   }
+
   #page1 {
     z-index: 4;
   }
+
   #page2 {
     z-index: 3;
   }
+
   #page3 {
     z-index: 2;
   }
+
   #page4 {
     z-index: 1;
   }
+
+  /* Center the book when opened */
   #checkbox-cover:checked ~ .book {
-    transform: translateX(17vw);
+    transform: translateX(calc(50% - 0vw)); /* Center the book */
   }
+
   #checkbox-cover:checked ~ .book .cover {
     transition: transform 1.5s, z-index 0.5s 0.5s;
     transform: rotateY(-180deg);
     z-index: 1;
   }
+
   #checkbox-cover:checked ~ .book .page {
     box-shadow: 0 0 3px rgb(99, 98, 98);
   }
+
   #checkbox-page1:checked ~ .book #page1 {
     transform: rotateY(-180deg);
     z-index: 2;
   }
+
   #checkbox-page2:checked ~ .book #page2 {
     transform: rotateY(-180deg);
     z-index: 3;
   }
+
   #checkbox-page3:checked ~ .book #page3 {
     transform: rotateY(-180deg);
     z-index: 4;
   }
+
 </style>
