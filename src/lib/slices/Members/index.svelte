@@ -1,5 +1,6 @@
 <script>
   /** @type {import("@prismicio/client").Content.MembersSlice} */
+  let currentItemIndex = 0;
   export let slice;
 </script>
 
@@ -19,26 +20,14 @@
             <div class="front-page">
               <!-- Hier komt een loop -->
               <div id="card-container" class="container">
-                <div class="card-item">test</div>
-                <div class="card-item">test</div>
-                <div class="card-item">test</div>
-                <div class="card-item">test</div>
-                <div class="card-item">test</div>
-                <div class="card-item">test</div>
-                <div class="card-item">test</div>
-                <div class="card-item">test</div>
-                <div class="card-item">test</div>
-                <div class="card-item">test</div>
-                <div class="card-item">test</div>
-                <div class="card-item">test</div>
-                <div class="card-item">test</div>
-                <div class="card-item">test</div>
-                <div class="card-item">test</div>
-                <div class="card-item">test</div>
-                <div class="card-item">test</div>
-                <div class="card-item">test</div>
-                <div class="card-item">test</div>
-                <div class="card-item">test</div>
+                {#each slice.items as item, index (item.slug.text)}
+                  {#if index < currentItemIndex}
+                    <!-- Skip items that have already been rendered -->
+                  {:else if index < currentItemIndex + 20}
+                    <!-- Render the next 20 items -->
+                    <div class="card-item">{item.name[0].text}</div>
+                  {/if}
+                {/each}
               </div>
                 <label class="next" for="checkbox-page1">Verder</label>
             </div>
@@ -186,10 +175,11 @@
   .back-page {
     transform: rotateY(180deg);
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 96%;
     backface-visibility: hidden;
     z-index: 99;
+    padding: 1rem;
   }
 
   .next,
