@@ -18,7 +18,19 @@
         <div class="page" id="page1">
             <div class="front-page">
               <!-- Hier komt een loop -->
-              <h2>Page 1</h2>
+              <div id="card-container" class="container">
+                <div class="card-item">test</div>
+                <div class="card-item">test</div>
+                <div class="card-item">test</div>
+                <div class="card-item">test</div>
+                <div class="card-item">test</div>
+                <div class="card-item">test</div>
+                <div class="card-item">test</div>
+                <div class="card-item">test</div>
+                <div class="card-item">test</div>
+                <div class="card-item">test</div>
+                <div class="card-item">test</div>
+              </div>
                 <label class="next" for="checkbox-page1">Verder</label>
             </div>
             <div class="back-page">
@@ -69,6 +81,21 @@
 </section>
 
 <style>
+  .container {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+}
+
+/* User profile cards styling */
+.card-item {
+    background: #bdbdbd;
+    margin: .35%;
+    flex: 0 1 calc(20% - .7%); /* <-- adjusting for margin */
+    width: calc(20% - .7%);
+}
+
   .yearbook-image {
     width: 200px;
   }
