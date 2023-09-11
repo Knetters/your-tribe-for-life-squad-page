@@ -90,26 +90,28 @@
 </section>
 
 <style>
+
+  /* Styling grid and yearbook cards */
   .container {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     position: relative;
-}
+  }
 
-/* User profile cards styling */
-.card-item {
-    background: #bdbdbd;
+  .card-item {
+    background: #c6c6c6;
     margin: .35%;
     height: 10rem;
-    flex: 0 1 calc(20% - .7%); /* <-- adjusting for margin */
+    flex: 0 1 calc(20% - .7%);
     width: calc(20% - .7%);
-}
+  }
 
   .yearbook-image {
     width: 200px;
   }
 
+  /* Styling and logic yearbook */
   section {
     height: 100vh;
     display: flex;
@@ -227,13 +229,14 @@
   }
 
   #checkbox-cover:checked ~ .book .cover {
-    transition: transform 1.5s, z-index 0.5s 0.5s;
+    transition: transform .5s, z-index .5s .5s;
     transform: rotateY(-180deg);
     z-index: 1;
   }
 
   #checkbox-cover:checked ~ .book .page {
-    box-shadow: 0 0 3px rgb(99, 98, 98);
+    box-shadow: 3px 0 0px #c8c8c8;
+    border-left: 1px solid rgb(194, 194, 194);
   }
 
   #checkbox-page1:checked ~ .book #page1 {
