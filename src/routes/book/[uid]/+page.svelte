@@ -10,13 +10,15 @@
     <input type="checkbox" id="checkbox-page1">
     <input type="checkbox" id="checkbox-page2">
     <input type="checkbox" id="checkbox-page3">
+    
     <div class="book">
         <div class="cover">
             <label for="checkbox-cover"></label>
         </div>
         <div class="page" id="page1">
             <div class="front-page">
-                <h2>Page 1</h2>
+              <h1>{data.title[0].text}</h1>
+              <p>{data.content[0].text}</p>
                 <label class="next" for="checkbox-page1">Verder</label>
             </div>
             <div class="back-page">
@@ -40,8 +42,7 @@
         <div class="back-cover"></div>
     </div>
 
-    <!-- <h1>{data.title[0].text}</h1>
-    <p>{data.content[0].text}</p>
+    <!-- 
     
     <SliceZone slices={data.slices} {components} /> -->
   
@@ -55,8 +56,8 @@
     justify-content: center;
   }
   .book {
-    width: 30vw;
-    height: 80vh;
+    width: 35vw;
+    height: 90vh;
     position: relative;
     transition-duration: 1s;
     perspective: 1500;
@@ -92,7 +93,7 @@
   .page {
     position: absolute;
     background-color: white;
-    width: 29vw;
+    width: 34vw;
     height: 96%;
     margin: 2% 0%;
     border-radius: 0 5px 5px 0;
@@ -101,11 +102,7 @@
     transform: rotateY(0deg);
     transition-duration: 1.5s;
   }
-  .page img {
-    width: 100%;
-    height: 100%;
-    border-radius: 15px 0 0 15px;
-  }
+
   .front-page {
     position: absolute;
     width: 100%;
@@ -143,7 +140,7 @@
     z-index: 1;
   }
   #checkbox-cover:checked ~ .book {
-    transform: translateX(200px);
+    transform: translateX(300px);
   }
   #checkbox-cover:checked ~ .book .cover {
     transition: transform 1.5s, z-index 0.5s 0.5s;
