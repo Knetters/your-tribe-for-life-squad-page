@@ -42,12 +42,12 @@
         "image": {
           "type": "Image",
           "config": {
-            "label": "image",
+            "thumbnails": [],
             "constraint": {
-              "width": 200,
-              "height": 200
+              "height": null,
+              "width": null
             },
-            "thumbnails": []
+            "label": "image"
           }
         }
       }
