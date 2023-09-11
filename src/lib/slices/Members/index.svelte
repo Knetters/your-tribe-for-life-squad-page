@@ -9,6 +9,7 @@
     <input type="checkbox" id="checkbox-page1">
     <input type="checkbox" id="checkbox-page2">
     <input type="checkbox" id="checkbox-page3">
+    <input type="checkbox" id="checkbox-page4">
     
     <div class="book">
         <div class="cover">
@@ -37,9 +38,20 @@
             </div>
         </div>
         <div class="page" id="page3">
+          <div class="front-page">
+            <!-- Hier komt een loop -->
+              <h2>Page 3</h2>
+              <label class="next" for="checkbox-page3">Verder</label>
+          </div>
+          <div class="back-page">
+            <!-- Hier komt een loop -->
+              <label class="prev" for="checkbox-page3">Terug</label>
+          </div>
+      </div>
+        <div class="page" id="page4">
             <div class="front-page">
               <!-- Hier komt een loop -->
-                <h2>Page 3</h2>
+                <h2>Page 4</h2>
             </div>
         </div>
         <div class="back-cover"></div>
@@ -78,11 +90,11 @@
     display: none;
   }
   .cover, .back-cover {
-    background-color: #4173a5;
+    background-color: #a55241;
     width: 100%;
     height: 100%;
     border-radius: 0 5px 5px 0;
-    box-shadow: 0 0 6px #272727;
+    box-shadow: 0 0 6px #424242;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -90,7 +102,7 @@
   }
   .cover {
     position: absolute;
-    z-index: 4;
+    z-index: 5;
     transition: transform .5s;
   }
   .cover label {
@@ -104,7 +116,7 @@
   }
   .page {
     position: absolute;
-    background-color: white;
+    background-color: #f2f2f2;
     width: 34vw;
     height: 96%;
     margin: 2% 0%;
@@ -143,12 +155,15 @@
     left: 1em;
   }
   #page1 {
-    z-index: 3;
+    z-index: 4;
   }
   #page2 {
-    z-index: 2;
+    z-index: 3;
   }
   #page3 {
+    z-index: 2;
+  }
+  #page4 {
     z-index: 1;
   }
   #checkbox-cover:checked ~ .book {
@@ -169,5 +184,9 @@
   #checkbox-page2:checked ~ .book #page2 {
     transform: rotateY(-180deg);
     z-index: 3;
+  }
+  #checkbox-page3:checked ~ .book #page3 {
+    transform: rotateY(-180deg);
+    z-index: 4;
   }
 </style>
