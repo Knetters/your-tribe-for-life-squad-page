@@ -214,7 +214,7 @@
     position: absolute;
     background-color: #f2f2f2;
     width: 34vw;
-    height: 96%;
+    height: 97%;
     margin: 2% 0%;
     border-radius: 0 5px 5px 0;
     transform-origin: left;
