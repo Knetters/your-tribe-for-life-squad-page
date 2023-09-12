@@ -101,7 +101,7 @@
       <div class="page" id="page3">
         <div class="front-page">
           <!-- Hier komt een loop -->
-            <h2>Page 3</h2>
+            
             <label class="next" for="checkbox-page3">Verder</label>
         </div>
         <div class="back-page">
@@ -112,7 +112,7 @@
       <div class="page" id="page4">
           <div class="front-page">
             <!-- Hier komt een loop -->
-              <h2>Page 4</h2>
+              
           </div>
       </div>
       <div class="back-cover"></div>
