@@ -22,9 +22,9 @@
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    border: 10px #a87328 solid;
+    border: 10px #7e6747 solid;
     overflow: hidden;
-    background-image: linear-gradient(#241909, #2c1e0b 220px, #b87e2c 220px, #b87e2c 222px, #a87328 222px, #a87328 228px, #986824 228px, #986824 230px);
+    background-image: linear-gradient(#241909, #2c1e0b 220px, #7e6747 220px, #514029 222px, #514029 222px, #69583f 228px, #514029 228px, #514029 230px);
     background-size: 10px 230px;
   }
 
