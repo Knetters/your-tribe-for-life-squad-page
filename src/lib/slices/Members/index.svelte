@@ -1,51 +1,8 @@
 <script>
-  import { onMount, setContext, getContext } from 'svelte';
-
   let currentPage = 1;
   let currentItemIndex = 0;
   export let slice;
 
-  // Function to move to the next page
-  function nextPage() {
-    if (currentPage < 4) {
-      currentPage++;
-      currentItemIndex = 0; // Reset the current item index when moving to a new page
-    }
-  }
-
-  // Function to handle the loop logic
-  function loopItems() {
-    const items = slice.items;
-    
-    // Loop through items
-    for (let i = currentItemIndex; i < items.length; i++) {
-      // Display the next item
-      if (i < currentItemIndex + 1) {
-        // Render the item
-        // ...
-      } else {
-        currentItemIndex = i;
-
-        if (currentItemIndex === items.length - 1) {
-          nextPage();
-          currentItemIndex = 0;
-        }
-
-        // Continue the loop after a delay (adjust as needed)
-        setTimeout(loopItems, 3000); // 3000 milliseconds (3 seconds)
-        return;
-      }
-    }
-  }
-
-  // Start the loop when the component is mounted
-  onMount(() => {
-    loopItems();
-  });
-
-  // Share the current page and item index with child components
-  setContext('currentPage', currentPage);
-  setContext('currentItemIndex', currentItemIndex);
 </script>
 
 <section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
