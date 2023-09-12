@@ -152,6 +152,7 @@
   .yearbook-image {
     width: 86%;
     margin-left: 7%;
+    border: 1px solid #000;
   }
 
   /* Styling and logic yearbook */
