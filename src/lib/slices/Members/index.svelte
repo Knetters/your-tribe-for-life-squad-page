@@ -63,6 +63,7 @@
         <div class="page" id="page1">
           <div class="front-page">
             <!-- Loop through items on the current page -->
+            <p>Naam van het jaarboek 2023 2024</p>
             <div id="card-container" class="container">
               {#each slice.items as item, index (item.slug.text)}
                 {#if index < currentItemIndex}
@@ -86,6 +87,7 @@
             <label class="next" for="checkbox-page1">Verder</label>
           </div>
             <div class="back-page">
+              <p>Naam van het jaarboek 2023 2024</p>
               <div id="card-container" class="container">
                 {#each slice.items as item, index (item.slug.text)}
                   {#if index < currentItemIndex}
@@ -110,6 +112,7 @@
         </div>
         <div class="page" id="page2">
             <div class="front-page">
+              <p>Naam van het jaarboek 2023 2024</p>
               <div id="card-container" class="container">
                 {#each slice.items as item, index (item.slug.text)}
                   {#if index < currentItemIndex}
@@ -161,6 +164,13 @@
 <style>
 
   /* Styling grid and yearbook cards */
+  p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
   .container {
     width: 100%;
     display: flex;
