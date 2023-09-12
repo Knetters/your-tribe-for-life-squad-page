@@ -17,7 +17,7 @@
   
   <div class="book">
       <div class="cover">
-        <label class="book-title" for="checkbox-cover">Jaarboek 2023 2024</label>
+        <label class="book-title" for="checkbox-cover">FDND Jaarboek 2023 2024</label>
       </div>
       <div class="page" id="page1">
         <div class="front-page">
@@ -240,6 +240,7 @@
     backface-visibility: hidden;
     box-sizing: border-box;
     padding: 1rem;
+    box-shadow: inset 3px 0px 10px #828080;
   }
 
   .back-page {
@@ -250,6 +251,7 @@
     backface-visibility: hidden;
     z-index: 99;
     padding: 1rem;
+    box-shadow: inset -3px 0px 10px #c4c1c1;
   }
 
   .next,
