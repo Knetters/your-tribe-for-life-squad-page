@@ -17,7 +17,7 @@
   
   <div class="book">
       <div class="cover">
-        <label for="checkbox-cover"></label>
+        <label class="book-title" for="checkbox-cover">Jaarboek 2023 2024</label>
       </div>
       <div class="page" id="page1">
         <div class="front-page">
@@ -165,6 +165,15 @@
     justify-content: center;
   }
 
+  .book-title {
+    z-index: 10;
+    text-align: center;
+    margin-top: 40vh;
+    font-size: 2rem;
+    color: #a6a16c;
+    transition: .2s;
+  }
+
   .book {
     width: 35vw;
     height: 90vh;
@@ -197,6 +206,7 @@
     transition: transform 0.5s;
     outline: .5rem solid #a6a16c;
     outline-offset: -1rem; 
+    transition: .2s;
   }
 
   .cover label {
@@ -278,10 +288,15 @@
     transform: translateX(calc(50% - 0vw)); /* Center the book */
   }
 
+  #checkbox-cover:checked ~ .book .cover label {
+    color: transparent;
+  }
+
   #checkbox-cover:checked ~ .book .cover {
     transition: transform .5s, z-index .5s .5s;
     transform: rotateY(-180deg);
     z-index: 1;
+    outline: .5rem solid transparent;
   }
 
   #checkbox-cover:checked ~ .book .page {
