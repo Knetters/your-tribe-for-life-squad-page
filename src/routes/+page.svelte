@@ -12,21 +12,10 @@
   
   <SliceZone slices={data.slices} {components} />
 
-  <pre>
-Data uit prismic:
-
-{JSON.stringify(data, null, 2)}
-  </pre>
 </section>
 
 <style>
   section {
     padding: 0rem .5rem;
-  }
-
-  pre {
-    background-color: #240a6d;
-    color: #7ddd90;
-    padding: 1rem;
   }
 </style>
