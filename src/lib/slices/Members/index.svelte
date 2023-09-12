@@ -204,7 +204,7 @@
     position: absolute;
     z-index: 5;
     transition: transform 0.5s;
-    outline: .5rem solid #a6a16c;
+    outline: .4rem solid #a6a16c;
     outline-offset: -1rem; 
     transition: .2s;
   }
