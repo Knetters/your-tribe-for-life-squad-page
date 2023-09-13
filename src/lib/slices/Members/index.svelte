@@ -16,12 +16,12 @@
   
   <div class="book">
       <div class="cover {context.color}">
-        <label class="book-title" for="checkbox-cover">{context.title}</label>
+        <label class="book-title" for="checkbox-cover"><span class="title">FDND JAARBOEK</span><br><span class="year">{context.title}</span></label>
       </div>
       <div class="page" id="page1">
         <div class="front-page">
           <!-- Loop through items on the current page -->
-          <p>{context.title}</p>
+          <p>FDND laatstejaars studenten {context.title}</p>
           <div id="card-container" class="container">
             {#each slice.items.slice(0, 20) as item}
               <div class="card-item">
@@ -40,7 +40,7 @@
           <label class="next" for="checkbox-page1">Verder</label>
         </div>
           <div class="back-page">
-            <p>{context.title}</p>
+            <p>FDND laatstejaars studenten {context.title}</p>
             <div id="card-container" class="container">
               {#each slice.items.slice(20, 40) as item}
                 <div class="card-item">
@@ -60,7 +60,7 @@
       </div>
       <div class="page" id="page2">
           <div class="front-page">
-            <p>{context.title}</p>
+            <p>FDND laatstejaars studenten {context.title}</p>
             <div id="card-container" class="container">
               {#each slice.items.slice(40, 60) as item}
                 <div class="card-item">
@@ -78,7 +78,7 @@
               <label class="next" for="checkbox-page2">Verder</label>
           </div>
           <div class="back-page">
-            <p>{context.title}</p>
+            <p>FDND laatstejaars studenten {context.title}</p>
             <div id="card-container" class="container">
               {#each slice.items.slice(60, 80) as item}
                 <div class="card-item">
@@ -99,7 +99,7 @@
       </div>
       <div class="page" id="page3">
         <div class="front-page">
-          <p>{context.title}</p>
+          <p>FDND laatstejaars studenten {context.title}</p>
             <div id="card-container" class="container">
               {#each slice.items.slice(80, 100) as item}
                 <div class="card-item">
@@ -118,7 +118,7 @@
             <label class="next" for="checkbox-page3">Verder</label>
         </div>
         <div class="back-page">
-          <p>{context.title}</p>
+          <p>FDND laatstejaars studenten {context.title}</p>
             <div id="card-container" class="container">
               {#each slice.items.slice(100, 120) as item}
                 <div class="card-item">
@@ -138,7 +138,7 @@
     </div>
       <div class="page" id="page4">
           <div class="front-page">
-            <p>{context.title}</p>
+            <p>FDND laatstejaars studenten {context.title}</p>
             <div id="card-container" class="container">
               {#each slice.items.slice(120, 140) as item}
                 <div class="card-item">
@@ -162,6 +162,8 @@
 </section>
 
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@700&display=swap');
+
   .red {
     background-color: #a13030;
   }
@@ -233,10 +235,21 @@
   .book-title {
     z-index: 10;
     text-align: center;
-    margin-top: 40vh;
-    font-size: 2rem;
+    padding-top: 40vh;
     color: #a6a16c;
     transition: .2s;
+  }
+
+  .title {
+    font-size: 3.5rem;
+    font-family: 'Cormorant Infant', serif;
+    text-decoration: underline;
+  }
+
+  .year {
+    font-size: 2.5rem;
+    text-decoration: none;
+    font-family: 'Cormorant Infant', serif;
   }
 
   .book {
