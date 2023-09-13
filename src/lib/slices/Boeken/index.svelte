@@ -29,7 +29,8 @@
 
   .bookshelf {
     box-sizing: border-box;
-    width: 100%;
+    margin: 0 auto;
+    width: 60%;
     height: 100%;
     border: 10px #7e6747 solid;
     overflow: hidden;

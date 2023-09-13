@@ -5,17 +5,24 @@
 </script>
 
 <section>
-  <h1>{data.title[0].text}</h1>
-  <p>{data.content[0].text}</p>
+  <!-- <h1>{data.title[0].text}</h1>
+  <p>{data.content[0].text}</p> -->
 
-  <hr>
-  
+  <div class="background">
+      
   <SliceZone slices={data.slices} {components} />
+
+  </div>
+
 
 </section>
 
 <style>
-  section {
-    padding: 0rem .5rem;
+  .background{
+    height: 100vh;
+    background-image: url("/img/background-mobile.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 1rem;
   }
 </style>
