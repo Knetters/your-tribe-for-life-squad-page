@@ -202,6 +202,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #dcd3be;
   }
 
   .book-title {
@@ -298,9 +299,9 @@
     position: absolute;
     bottom: 1em;
     cursor: pointer;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 
   .next {
@@ -363,4 +364,26 @@
     z-index: 4;
   }
 
+  @media only screen and (max-width: 1000px) {
+    .book {
+      width: 40vw;
+      height: 50vh;
+      position: relative;
+      transition-duration: 1s;
+      perspective: 1500;
+    }
+
+    .page {
+      position: absolute;
+      background-color: #f2f2f2;
+      width: 49vw;
+      height: 97%;
+      margin: 2% 0%;
+      border-radius: 0 5px 5px 0;
+      transform-origin: left;
+      transform-style: preserve-3d;
+      transform: rotateY(0deg);
+      transition-duration: 0.5s;
+    }
+  }
 </style>
