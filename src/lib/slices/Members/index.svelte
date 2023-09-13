@@ -24,22 +24,18 @@
           <!-- Loop through items on the current page -->
           <p>Naam van het jaarboek 2023 2024</p>
           <div id="card-container" class="container">
-            {#each slice.items as item, index (item.slug.text)}
-              {#if index < currentItemIndex}
-                <!-- Skip items that have already been rendered -->
-              {:else if currentPage === 1 && index < currentItemIndex + 20}
-                <!-- Render the next 20 items on page 1 -->
-                  <div class="card-item">
-                    <div class="inner-card">
-                      {#if !item.image.url}
-                        <img class="yearbook-image" src="/img/placeholder-image.jpg" alt="" />
-                      {:else}
-                        <img class="yearbook-image" src={item.image.url} alt={item.image.alt} />
-                      {/if}
-                        <p>{item.name[0].text}</p>
-                    </div>
-                  </div>
-                {/if}
+            {#each slice.items.slice(0, 20) as item}
+              <!-- Render the next 20 items on page 1 -->
+              <div class="card-item">
+                <div class="inner-card">
+                  {#if !item.image.url}
+                    <img class="yearbook-image" src="/img/placeholder-image.jpg" alt="" />
+                  {:else}
+                    <img class="yearbook-image" src={item.image.url} alt={item.image.alt} />
+                  {/if}
+                  <p>{item.name[0].text}</p>
+                </div>
+              </div>
             {/each}
           </div>
           <!-- No need for the click event here -->
@@ -48,22 +44,18 @@
           <div class="back-page">
             <p>Naam van het jaarboek 2023 2024</p>
             <div id="card-container" class="container">
-              {#each slice.items as item, index (item.slug.text)}
-                {#if index < currentItemIndex}
-                  <!-- Skip items that have already been rendered -->
-                {:else if currentPage === 1 && index < currentItemIndex + 20}
-                  <!-- Render the next 20 items on page 1 -->
-                  <div class="card-item">
-                    <div class="inner-card">
-                      {#if !item.image.url}
-                        <img class="yearbook-image" src="/img/placeholder-image.jpg" alt="" />
-                      {:else}
-                        <img class="yearbook-image" src={item.image.url} alt={item.image.alt} />
-                      {/if}
-                        <p>{item.name[0].text}</p>
-                    </div>
+              {#each slice.items.slice(20, 40) as item}
+                <!-- Render the next 20 items on page 1 -->
+                <div class="card-item">
+                  <div class="inner-card">
+                    {#if !item.image.url}
+                      <img class="yearbook-image" src="/img/placeholder-image.jpg" alt="" />
+                    {:else}
+                      <img class="yearbook-image" src={item.image.url} alt={item.image.alt} />
+                    {/if}
+                    <p>{item.name[0].text}</p>
                   </div>
-                {/if}
+                </div>
               {/each}
             </div>
               <label class="prev" for="checkbox-page1">Terug</label>
@@ -73,45 +65,102 @@
           <div class="front-page">
             <p>Naam van het jaarboek 2023 2024</p>
             <div id="card-container" class="container">
-              {#each slice.items as item, index (item.slug.text)}
-                {#if index < currentItemIndex}
-                  <!-- Skip items that have already been rendered -->
-                {:else if currentPage === 1 && index < currentItemIndex + 20}
-                  <!-- Render the next 20 items on page 1 -->
-                  <div class="card-item">
-                    <div class="inner-card">
-                      {#if !item.image.url}
-                        <img class="yearbook-image" src="/img/placeholder-image.jpg" alt="" />
-                      {:else}
-                        <img class="yearbook-image" src={item.image.url} alt={item.image.alt} />
-                      {/if}
-                        <p>{item.name[0].text}</p>
-                    </div>
+              {#each slice.items.slice(40, 60) as item}
+                <!-- Render the next 20 items on page 1 -->
+                <div class="card-item">
+                  <div class="inner-card">
+                    {#if !item.image.url}
+                      <img class="yearbook-image" src="/img/placeholder-image.jpg" alt="" />
+                    {:else}
+                      <img class="yearbook-image" src={item.image.url} alt={item.image.alt} />
+                    {/if}
+                    <p>{item.name[0].text}</p>
                   </div>
-                {/if}
+                </div>
               {/each}
             </div>
               <label class="next" for="checkbox-page2">Verder</label>
           </div>
           <div class="back-page">
-            <!-- Hier komt een loop -->
+            <p>Naam van het jaarboek 2023 2024</p>
+            <div id="card-container" class="container">
+              {#each slice.items.slice(60, 80) as item}
+                <!-- Render the next 20 items on page 1 -->
+                <div class="card-item">
+                  <div class="inner-card">
+                    {#if !item.image.url}
+                      <img class="yearbook-image" src="/img/placeholder-image.jpg" alt="" />
+                    {:else}
+                      <img class="yearbook-image" src={item.image.url} alt={item.image.alt} />
+                    {/if}
+                    <p>{item.name[0].text}</p>
+                  </div>
+                </div>
+              {/each}
+            </div>
+            
               <label class="prev" for="checkbox-page2">Terug</label>
           </div>
       </div>
       <div class="page" id="page3">
         <div class="front-page">
-          <!-- Hier komt een loop -->
+          <p>Naam van het jaarboek 2023 2024</p>
+            <div id="card-container" class="container">
+              {#each slice.items.slice(80, 100) as item}
+                <!-- Render the next 20 items on page 1 -->
+                <div class="card-item">
+                  <div class="inner-card">
+                    {#if !item.image.url}
+                      <img class="yearbook-image" src="/img/placeholder-image.jpg" alt="" />
+                    {:else}
+                      <img class="yearbook-image" src={item.image.url} alt={item.image.alt} />
+                    {/if}
+                    <p>{item.name[0].text}</p>
+                  </div>
+                </div>
+              {/each}
+            </div>
             
             <label class="next" for="checkbox-page3">Verder</label>
         </div>
         <div class="back-page">
-          <!-- Hier komt een loop -->
+          <p>Naam van het jaarboek 2023 2024</p>
+            <div id="card-container" class="container">
+              {#each slice.items.slice(100, 120) as item}
+                <!-- Render the next 20 items on page 1 -->
+                <div class="card-item">
+                  <div class="inner-card">
+                    {#if !item.image.url}
+                      <img class="yearbook-image" src="/img/placeholder-image.jpg" alt="" />
+                    {:else}
+                      <img class="yearbook-image" src={item.image.url} alt={item.image.alt} />
+                    {/if}
+                    <p>{item.name[0].text}</p>
+                  </div>
+                </div>
+              {/each}
+            </div>
             <label class="prev" for="checkbox-page3">Terug</label>
         </div>
     </div>
       <div class="page" id="page4">
           <div class="front-page">
-            <!-- Hier komt een loop -->
+            <p>Naam van het jaarboek 2023 2024</p>
+            <div id="card-container" class="container">
+              {#each slice.items.slice(120, 140) as item}
+                <!-- Render the next 20 items on page 1 -->
+                <div class="card-item">
+                  <div class="inner-card">
+                    {#if !item.image.url}
+                      <img class="yearbook-image" src="/img/placeholder-image.jpg" alt="" />
+                    {:else}
+                      <img class="yearbook-image" src={item.image.url} alt={item.image.alt} />
+                    {/if}
+                    <p>{item.name[0].text}</p>
+                  </div>
+                </div>
+              {/each}
+            </div>
               
           </div>
       </div>
