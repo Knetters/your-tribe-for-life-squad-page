@@ -1,6 +1,8 @@
 <script>
-  // import { bookTitle } from '/src/routes/book/[uid]/+page.svelte';
   export let slice;
+  export let context;
+
+  console.log(context)
 
 </script>
 
@@ -14,12 +16,12 @@
   
   <div class="book">
       <div class="cover">
-        <label class="book-title" for="checkbox-cover">FDND Jaarboek 2023 2024</label>
+        <label class="book-title" for="checkbox-cover">{context.title}</label>
       </div>
       <div class="page" id="page1">
         <div class="front-page">
           <!-- Loop through items on the current page -->
-          <p>Naam van het jaarboek 2023 2024</p>
+          <p>{context.title}</p>
           <div id="card-container" class="container">
             {#each slice.items.slice(0, 20) as item}
               <div class="card-item">
@@ -38,7 +40,7 @@
           <label class="next" for="checkbox-page1">Verder</label>
         </div>
           <div class="back-page">
-            <p>Naam van het jaarboek 2023 2024</p>
+            <p>{context}</p>
             <div id="card-container" class="container">
               {#each slice.items.slice(20, 40) as item}
                 <div class="card-item">
@@ -58,7 +60,7 @@
       </div>
       <div class="page" id="page2">
           <div class="front-page">
-            <p>Naam van het jaarboek 2023 2024</p>
+            <p>{context}</p>
             <div id="card-container" class="container">
               {#each slice.items.slice(40, 60) as item}
                 <div class="card-item">
@@ -76,7 +78,7 @@
               <label class="next" for="checkbox-page2">Verder</label>
           </div>
           <div class="back-page">
-            <p>Naam van het jaarboek 2023 2024</p>
+            <p>{context}</p>
             <div id="card-container" class="container">
               {#each slice.items.slice(60, 80) as item}
                 <div class="card-item">
@@ -97,7 +99,7 @@
       </div>
       <div class="page" id="page3">
         <div class="front-page">
-          <p>Naam van het jaarboek 2023 2024</p>
+          <p>{context}</p>
             <div id="card-container" class="container">
               {#each slice.items.slice(80, 100) as item}
                 <div class="card-item">
@@ -116,7 +118,7 @@
             <label class="next" for="checkbox-page3">Verder</label>
         </div>
         <div class="back-page">
-          <p>Naam van het jaarboek 2023 2024</p>
+          <p>{context}</p>
             <div id="card-container" class="container">
               {#each slice.items.slice(100, 120) as item}
                 <div class="card-item">
@@ -136,7 +138,7 @@
     </div>
       <div class="page" id="page4">
           <div class="front-page">
-            <p>Naam van het jaarboek 2023 2024</p>
+            <p>{context}</p>
             <div id="card-container" class="container">
               {#each slice.items.slice(120, 140) as item}
                 <div class="card-item">

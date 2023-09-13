@@ -266,7 +266,7 @@ export interface BoekenSliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   color: prismic.SelectField<
-    "red" | "blue" | "green" | "yellow" | "purple" | "brown"
+    "red" | "blue" | "green" | "yellow" | "purple" | "brown" | "ghost"
   >;
 
   /**

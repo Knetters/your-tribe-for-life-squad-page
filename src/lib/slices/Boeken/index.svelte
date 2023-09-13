@@ -13,11 +13,20 @@
         </div>
       </a>
     {/each}
+    <div class="ghost">p</div>
   </div>
 
 </section>
 
 <style>
+  .ghost {
+    width: 100%;
+    background-color: blue;
+    float: left;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+
   .bookshelf {
     box-sizing: border-box;
     width: 100%;
