@@ -15,7 +15,7 @@
   <input type="checkbox" id="checkbox-page4">
   
   <div class="book">
-      <div class="cover">
+      <div class="cover {context.color}">
         <label class="book-title" for="checkbox-cover">{context.title}</label>
       </div>
       <div class="page" id="page1">
@@ -40,7 +40,7 @@
           <label class="next" for="checkbox-page1">Verder</label>
         </div>
           <div class="back-page">
-            <p>{context}</p>
+            <p>{context.title}</p>
             <div id="card-container" class="container">
               {#each slice.items.slice(20, 40) as item}
                 <div class="card-item">
@@ -60,7 +60,7 @@
       </div>
       <div class="page" id="page2">
           <div class="front-page">
-            <p>{context}</p>
+            <p>{context.title}</p>
             <div id="card-container" class="container">
               {#each slice.items.slice(40, 60) as item}
                 <div class="card-item">
@@ -78,7 +78,7 @@
               <label class="next" for="checkbox-page2">Verder</label>
           </div>
           <div class="back-page">
-            <p>{context}</p>
+            <p>{context.title}</p>
             <div id="card-container" class="container">
               {#each slice.items.slice(60, 80) as item}
                 <div class="card-item">
@@ -99,7 +99,7 @@
       </div>
       <div class="page" id="page3">
         <div class="front-page">
-          <p>{context}</p>
+          <p>{context.title}</p>
             <div id="card-container" class="container">
               {#each slice.items.slice(80, 100) as item}
                 <div class="card-item">
@@ -118,7 +118,7 @@
             <label class="next" for="checkbox-page3">Verder</label>
         </div>
         <div class="back-page">
-          <p>{context}</p>
+          <p>{context.title}</p>
             <div id="card-container" class="container">
               {#each slice.items.slice(100, 120) as item}
                 <div class="card-item">
@@ -138,7 +138,7 @@
     </div>
       <div class="page" id="page4">
           <div class="front-page">
-            <p>{context}</p>
+            <p>{context.title}</p>
             <div id="card-container" class="container">
               {#each slice.items.slice(120, 140) as item}
                 <div class="card-item">
@@ -156,12 +156,35 @@
               
           </div>
       </div>
-      <div class="back-cover"></div>
+      <div class="back-cover {context.color}"></div>
   </div>
 
 </section>
 
 <style>
+  .red {
+    background-color: #a13030;
+  }
+
+  .blue {
+    background-color: #32609c;
+  }
+
+  .green {
+    background-color: #3a6c51;
+  }
+
+  .yellow {
+    background-color: #eded80;
+  }
+
+  .purple {
+    background-color: #774194;
+  }
+
+  .brown {
+    background-color: #54290c;
+  }
 
   /* Styling grid and yearbook cards */
   p {
@@ -230,7 +253,6 @@
 
   .cover,
   .back-cover {
-    background-color: #a13030;
     width: 100%;
     height: 100%;
     border-radius: 0 5px 5px 0;

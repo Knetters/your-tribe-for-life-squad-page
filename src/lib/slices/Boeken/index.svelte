@@ -14,14 +14,17 @@
       </a>
     {/each}
     <div class="ghost">p</div>
+    <div class="ghost">p</div>
+    <div class="ghost">p</div>
   </div>
 
 </section>
 
 <style>
   .ghost {
+    height: 200px;
     width: 100%;
-    background-color: blue;
+    background-color: transparent;
     float: left;
     margin-bottom: 10px;
     margin-top: 20px;
