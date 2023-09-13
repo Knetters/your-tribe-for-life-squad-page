@@ -1,8 +1,5 @@
 <script>
   // import { bookTitle } from '/src/routes/book/[uid]/+page.svelte';
-
-  let currentPage = 1;
-  let currentItemIndex = 0;
   export let slice;
 
 </script>
@@ -25,7 +22,6 @@
           <p>Naam van het jaarboek 2023 2024</p>
           <div id="card-container" class="container">
             {#each slice.items.slice(0, 20) as item}
-              <!-- Render the next 20 items on page 1 -->
               <div class="card-item">
                 <div class="inner-card">
                   {#if !item.image.url}
@@ -45,7 +41,6 @@
             <p>Naam van het jaarboek 2023 2024</p>
             <div id="card-container" class="container">
               {#each slice.items.slice(20, 40) as item}
-                <!-- Render the next 20 items on page 1 -->
                 <div class="card-item">
                   <div class="inner-card">
                     {#if !item.image.url}
@@ -66,7 +61,6 @@
             <p>Naam van het jaarboek 2023 2024</p>
             <div id="card-container" class="container">
               {#each slice.items.slice(40, 60) as item}
-                <!-- Render the next 20 items on page 1 -->
                 <div class="card-item">
                   <div class="inner-card">
                     {#if !item.image.url}
@@ -85,7 +79,6 @@
             <p>Naam van het jaarboek 2023 2024</p>
             <div id="card-container" class="container">
               {#each slice.items.slice(60, 80) as item}
-                <!-- Render the next 20 items on page 1 -->
                 <div class="card-item">
                   <div class="inner-card">
                     {#if !item.image.url}
@@ -107,7 +100,6 @@
           <p>Naam van het jaarboek 2023 2024</p>
             <div id="card-container" class="container">
               {#each slice.items.slice(80, 100) as item}
-                <!-- Render the next 20 items on page 1 -->
                 <div class="card-item">
                   <div class="inner-card">
                     {#if !item.image.url}
@@ -127,7 +119,6 @@
           <p>Naam van het jaarboek 2023 2024</p>
             <div id="card-container" class="container">
               {#each slice.items.slice(100, 120) as item}
-                <!-- Render the next 20 items on page 1 -->
                 <div class="card-item">
                   <div class="inner-card">
                     {#if !item.image.url}
@@ -148,7 +139,6 @@
             <p>Naam van het jaarboek 2023 2024</p>
             <div id="card-container" class="container">
               {#each slice.items.slice(120, 140) as item}
-                <!-- Render the next 20 items on page 1 -->
                 <div class="card-item">
                   <div class="inner-card">
                     {#if !item.image.url}
