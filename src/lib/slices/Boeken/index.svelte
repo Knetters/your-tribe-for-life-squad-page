@@ -245,21 +245,21 @@
 
 @media (min-width:1024px) {
   .bookshelf1{
-    margin: 15.5rem auto;
-    width: 40%;
-    height: 10rem;
+    margin: 22rem auto;
+    width: 35%;
+    height: 11rem;
    }
 
    .bookshelf2{
-    margin: -16rem auto;
-    width: 40%;
-    height: 10rem;
+    margin: -22.5rem auto;
+    width: 35%;
+    height: 11rem;
    }
 
    .bookshelf3{
-    margin: 15rem auto;
-    width: 40%;
-    height: 10rem;
+    margin: 22rem auto;
+    width: 35%;
+    height: 11rem;
    }
 
    .bookshelf4{
@@ -267,7 +267,7 @@
    }
 
    .book {
-    height: 140px;
+    height: 160px;
     width: 40px;
   }
   .book h2 {

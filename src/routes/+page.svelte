@@ -89,9 +89,23 @@
 
   @media (min-width:1024px) {
     .background{
-    background-image: url("/img/background-desktop.png");
+    background-image: url("/img/background-desktop2.png");
     }
 
+    .pingpong{
+      width: 14rem;
+      bottom: 3%;
+      left: 10%;
+    }
+
+    .plant{
+      width: 20rem;
+      right: 5%;
+      bottom: 5%;
+    }
+  }
+/* 
+  @media (min-width:1400px) {
     .pingpong{
       width: 12rem;
     }
@@ -101,6 +115,7 @@
       right: 5%;
       bottom: 5%;
     }
-  }
+  } */
+
 
 </style>
