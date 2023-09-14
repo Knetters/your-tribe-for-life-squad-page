@@ -13,27 +13,27 @@
         </div>
       </a>
     {/each}
+    <!-- <div class="ghost">p</div>
     <div class="ghost">p</div>
-    <div class="ghost">p</div>
-    <div class="ghost">p</div>
+    <div class="ghost">p</div> -->
   </div>
 
 </section>
 
 <style>
   .ghost {
-    height: 200px;
+    height: 80px;
     width: 100%;
     background-color: transparent;
     float: left;
-    margin-bottom: 10px;
-    margin-top: 20px;
+    /* margin-bottom: 10px;
+    margin-top: 20px; */
   }
 
   .bookshelf {
     box-sizing: border-box;
     margin: 0 auto;
-    width: 60%;
+    width: 65%;
     height: 100%;
     border: 10px #7e6747 solid;
     overflow: hidden;
@@ -42,14 +42,14 @@
   }
 
   .book {
-    height: 200px;
+    height: 150px;
     width: 40px;
     float: left;
     color: white;
     font-size: 0.9em;
     font-family: Verdana, sans-serif;
     margin-bottom: 10px;
-    margin-top: 20px;
+    margin-top: 70px;
     transition: transform 0.4s ease;
   }
 
@@ -98,7 +98,7 @@
 
   .book h2 {
     padding-top: .4rem;
-    font-size: 1em;
+    font-size: .6em;
     transform-origin: 0% 0%;
     transform: rotate(0.25turn) translateY(-35px);
     width: 170px;
