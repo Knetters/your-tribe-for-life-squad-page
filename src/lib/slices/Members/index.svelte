@@ -466,7 +466,42 @@
     display: none;
   }
 
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 1000px) {
+    section {
+      overflow-y: scroll;
+    }
+
+    p {
+      margin-top: 1rem;
+    }
+
+    .book {
+      width: 45vw;
+      height: 90vh;
+    }
+
+    .page {
+      width: 43vw;
+      height: 98%;
+      margin: 2% 0%;
+    }
+
+    .container {
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      position: relative;
+    }
+
+    .card-item {
+      margin: 0.5%; /* Adjusted margin for better spacing */
+      height: 14vh;
+      flex: 0 1 calc(25% - 1%); /* 25% width for each card item */
+      width: calc(25% - 1%);
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
     section {
       overflow-y: scroll;
     }
