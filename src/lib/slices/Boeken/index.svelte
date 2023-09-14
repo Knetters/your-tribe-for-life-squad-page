@@ -73,6 +73,7 @@
 
   .book:hover {
     transform: scale(1.05);
+    transform-origin: 0 0;
   }
 
   .book-red {
@@ -248,12 +249,14 @@
     margin: 22rem auto;
     width: 35%;
     height: 11rem;
+    overflow: visible;
    }
 
    .bookshelf2{
     margin: -22.5rem auto;
     width: 35%;
     height: 11rem;
+    overflow: visible;
    }
 
    .bookshelf3{
@@ -267,7 +270,7 @@
    }
 
    .book {
-    height: 160px;
+    height: 155px;
     width: 40px;
   }
   .book h2 {
