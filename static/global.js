@@ -1,11 +1,24 @@
+function toggleDraw() {
+  var canvas = document.getElementById("drawing-canvas");
+  
+  // Get the current value of the pointer-events property
+  var currentPointerEvents = canvas.style.pointerEvents || "none";
+
+  // Toggle the pointer-events property
+  if (currentPointerEvents === "auto") {
+    canvas.style.pointerEvents = "none";
+  } else {
+    canvas.style.pointerEvents = "auto";
+  }
+}
+
 // Get the drawing canvas element
-const page = document.querySelector('.page');
 const canvas = document.querySelector('.drawing-canvas');
 const ctx = canvas.getContext('2d');
 
 // Set the canvas size
-canvas.width = page.innerWidth;
-canvas.height = page.innerHeight;
+canvas.width = canvas.clientWidth;
+canvas.height = canvas.clientHeight;
 
 // Variables
 let isDrawing = false;
@@ -14,16 +27,9 @@ let lastY = 0;
 let brushSize = 3; // You can set the desired default brush size
 let brushColor = "#141414"; // Default brush color (black)
 
-function changeBrushColor(color) {
-  brushColor = color;
-}
-
 function startDrawing(e) {
   isDrawing = true;
   [lastX, lastY] = [e.offsetX, e.offsetY];
-
-  // Save the initial point for undo purposes
-  drawingHistory.push({ x: lastX, y: lastY });
 }
 
 function draw(e) {
@@ -42,9 +48,6 @@ function draw(e) {
   ctx.stroke();
 
   [lastX, lastY] = [x, y];
-
-  // Save the new point for undo purposes
-  drawingHistory.push({ x: lastX, y: lastY });
 }
 
 function stopDrawing() {

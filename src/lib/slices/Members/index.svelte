@@ -49,7 +49,7 @@
               </div>
             {/each}
           </div>
-            <canvas class="drawing-canvas"></canvas>
+            <canvas id="drawing-canvas" class="drawing-canvas"></canvas>
           <label class="next" for="checkbox-page1">Verder</label>
         </div>
           <div class="back-page">
@@ -278,7 +278,7 @@
     left: 0;
     border: solid 1px red;
     cursor: crosshair;
-    /* pointer-events: none; */
+    pointer-events: none;
   }
 
   /* Styling and logic yearbook */
