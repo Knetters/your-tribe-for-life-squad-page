@@ -6,6 +6,7 @@
 <section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
 
   <div class="bookshelf">
+  <div class="bookshelf1">
     {#each slice.items as item (item.slug.text)}
       <a href={`book/${item.slug[0].text}`}>
         <div class="book book-{item.color}">
@@ -16,28 +17,29 @@
     </div>
 
     <div class="bookshelf2">
+      <!-- {#each slice.items as item (item.slug.text)}
+      <a href={`book/${item.slug[0].text}`}>
+        <div class="book book-{item.color}">
+          <h2>{item.title[0].text}</h2>
+        </div>
+      </a>
+    {/each} -->
       </div>
 
       <div class="bookshelf3">
+        <!-- {#each slice.items as item (item.slug.text)}
+        <a href={`book/${item.slug[0].text}`}>
+          <div class="book book-{item.color}">
+            <h2>{item.title[0].text}</h2>
+          </div>
+        </a>
+      {/each} -->
       </div>
-
-    <!-- <div class="ghost">p</div>
-    <div class="ghost">p</div>
-    <div class="ghost">p</div> -->
-
+    </div>
 </section>
 
 <style>
-  /* .ghost {
-    height: 80px;
-    width: 100%;
-    background-color: transparent;
-    float: left; */
-    /* margin-bottom: 10px;
-    margin-top: 20px; */
-  
-
-  .bookshelf {
+  .bookshelf1 {
     box-sizing: border-box;
     margin: 13rem auto;
     width: 70%;
@@ -50,19 +52,21 @@
     box-sizing: border-box;
     margin: -13.6rem auto;
     width: 70%;
-    height: 9rem;
+    height: 8.5rem;
     border: 10px #553621 solid;
     overflow: hidden;
     background-image: linear-gradient(#241909, #2c1e0b 220px, #7e6747 220px, #514029 222px, #514029 222px, #69583f 228px, #514029 228px, #514029 230px);
   }
 
   .bookshelf3 {
+    /* position: absolute; */
     box-sizing: border-box;
-    margin: 12rem auto;
+    margin: 13rem auto;
     width: 70%;
     height: 8.5rem;
     border: 10px #553621 solid;
     overflow: hidden;
+    /* z-index: 2; */
     background-image: linear-gradient(#241909, #2c1e0b 220px, #7e6747 220px, #514029 222px, #514029 222px, #69583f 228px, #514029 228px, #514029 230px);
   }
 
