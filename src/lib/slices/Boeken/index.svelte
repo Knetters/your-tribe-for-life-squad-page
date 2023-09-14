@@ -13,43 +13,66 @@
         </div>
       </a>
     {/each}
+    </div>
+
+    <div class="bookshelf2">
+      </div>
+
+      <div class="bookshelf3">
+      </div>
+
     <!-- <div class="ghost">p</div>
     <div class="ghost">p</div>
     <div class="ghost">p</div> -->
-  </div>
 
 </section>
 
 <style>
-  .ghost {
+  /* .ghost {
     height: 80px;
     width: 100%;
     background-color: transparent;
-    float: left;
+    float: left; */
     /* margin-bottom: 10px;
     margin-top: 20px; */
-  }
+  
 
   .bookshelf {
     box-sizing: border-box;
-    margin: 0 auto;
-    width: 65%;
-    height: 100%;
-    border: 10px #7e6747 solid;
+    margin: 13rem auto;
+    width: 70%;
+    border: 10px #553621 solid;
     overflow: hidden;
     background-image: linear-gradient(#241909, #2c1e0b 220px, #7e6747 220px, #514029 222px, #514029 222px, #69583f 228px, #514029 228px, #514029 230px);
-    background-size: 10px 230px;
+  }
+
+  .bookshelf2 {
+    box-sizing: border-box;
+    margin: -13.6rem auto;
+    width: 70%;
+    height: 9rem;
+    border: 10px #553621 solid;
+    overflow: hidden;
+    background-image: linear-gradient(#241909, #2c1e0b 220px, #7e6747 220px, #514029 222px, #514029 222px, #69583f 228px, #514029 228px, #514029 230px);
+  }
+
+  .bookshelf3 {
+    box-sizing: border-box;
+    margin: 12rem auto;
+    width: 70%;
+    height: 8.5rem;
+    border: 10px #553621 solid;
+    overflow: hidden;
+    background-image: linear-gradient(#241909, #2c1e0b 220px, #7e6747 220px, #514029 222px, #514029 222px, #69583f 228px, #514029 228px, #514029 230px);
   }
 
   .book {
-    height: 150px;
-    width: 40px;
+    height: 115px;
+    width: 25px;
     float: left;
     color: white;
     font-size: 0.9em;
     font-family: Verdana, sans-serif;
-    margin-bottom: 10px;
-    margin-top: 70px;
     transition: transform 0.4s ease;
   }
 
@@ -100,7 +123,7 @@
     padding-top: .4rem;
     font-size: .6em;
     transform-origin: 0% 0%;
-    transform: rotate(0.25turn) translateY(-35px);
+    transform: rotate(0.25turn) translateY(-24px);
     width: 170px;
     color: #e7dd71;
   }
