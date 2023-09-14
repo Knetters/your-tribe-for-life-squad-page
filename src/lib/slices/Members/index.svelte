@@ -49,7 +49,7 @@
               </div>
             {/each}
           </div>
-            <canvas id="drawing-canvas" class="drawing-canvas"></canvas>
+          <canvas id="drawing-canvas" class="drawing-canvas" width="600" height="700"></canvas>
           <label class="next" for="checkbox-page1">Verder</label>
         </div>
           <div class="back-page">
@@ -276,9 +276,10 @@
     z-index: 999;
     top: 0;
     left: 0;
-    border: solid 1px red;
+    /* border: solid 1px red; */
     cursor: crosshair;
     pointer-events: none;
+    backface-visibility: none;
   }
 
   /* Styling and logic yearbook */
@@ -465,7 +466,7 @@
     display: none;
   }
 
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 800px) {
     section {
       overflow-y: scroll;
     }
