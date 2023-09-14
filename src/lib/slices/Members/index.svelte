@@ -6,7 +6,7 @@
 
 </script>
 
-<section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
+<section class="desktop-book" data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
 
   <input type="checkbox" id="checkbox-cover">
   <input type="checkbox" id="checkbox-page1">
@@ -161,6 +161,28 @@
 
 </section>
 
+<section class="mobile-book" data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
+
+  <div class="mobile-book">
+    <p>FDND laatstejaars studenten {context.title}</p>
+    <div id="card-container" class="container">
+      {#each slice.items as item}
+        <div class="card-item">
+          <div class="inner-card">
+            {#if !item.image.url}
+              <img class="yearbook-image" src="/img/placeholder-image.jpg" alt="" />
+            {:else}
+              <img class="yearbook-image" src={item.image.url} alt={item.image.alt} />
+            {/if}
+            <p>{item.name[0].text}</p>
+          </div>
+        </div>
+      {/each}
+    </div>
+  </div>
+
+</section>
+
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@700&display=swap');
 
@@ -230,6 +252,7 @@
     align-items: center;
     justify-content: center;
     background-color: #dcd3be;
+    overflow-y: hidden;
   }
 
   .book-title {
@@ -241,13 +264,13 @@
   }
 
   .title {
-    font-size: 3.5rem;
+    font-size: 3.5vw;
     font-family: 'Cormorant Infant', serif;
     text-decoration: underline;
   }
 
   .year {
-    font-size: 2.5rem;
+    font-size: 2.5vw;
     text-decoration: none;
     font-family: 'Cormorant Infant', serif;
   }
@@ -401,26 +424,42 @@
     z-index: 4;
   }
 
+  .mobile-book {
+    display: none;
+  }
+
   @media only screen and (max-width: 1000px) {
-    .book {
-      width: 40vw;
-      height: 50vh;
-      position: relative;
-      transition-duration: 1s;
-      perspective: 1500;
+    section {
+      overflow-y: scroll;
     }
 
-    .page {
-      position: absolute;
+    .desktop-book {
+      display: none;
+    }
+
+    .mobile-book {
+      display: block;
+      position: relative;
       background-color: #f2f2f2;
-      width: 49vw;
-      height: 97%;
-      margin: 2% 0%;
-      border-radius: 0 5px 5px 0;
-      transform-origin: left;
-      transform-style: preserve-3d;
-      transform: rotateY(0deg);
-      transition-duration: 0.5s;
+      padding: .2rem;
+    }
+
+    p {
+      margin-top: 1rem;
+    }
+
+    .container {
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      position: relative;
+    }
+
+    .card-item {
+      margin: 0.5%; /* Adjusted margin for better spacing */
+      height: 18vh;
+      flex: 0 1 calc(25% - 1%); /* 25% width for each card item */
+      width: calc(25% - 1%);
     }
   }
 </style>
