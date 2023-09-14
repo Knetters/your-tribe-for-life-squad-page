@@ -24,7 +24,7 @@ canvas.height = canvas.clientHeight;
 let isDrawing = false;
 let lastX = 0;
 let lastY = 0;
-let brushSize = 3; // You can set the desired default brush size
+let brushSize = 2; // You can set the desired default brush size
 let brushColor = "#141414"; // Default brush color (black)
 
 function startDrawing(e) {
