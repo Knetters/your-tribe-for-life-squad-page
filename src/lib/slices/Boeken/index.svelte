@@ -21,6 +21,9 @@
 
       <div class="bookshelf3">
       </div>
+
+      <div class="bookshelf4">
+      </div>
     </div>
 </section>
 
@@ -52,6 +55,10 @@
     border: 10px #553621 solid;
     overflow: hidden;
     background-image: linear-gradient(#241909, #2c1e0b 220px, #7e6747 220px, #514029 222px, #514029 222px, #69583f 228px, #514029 228px, #514029 230px);
+  }
+
+  .bookshelf4{
+    display:none;
   }
 
   .book {
@@ -164,6 +171,108 @@
    .book {
     height: 188px;
     width: 35px;
+  }
+}
+
+@media (min-width:820px) {
+  .bookshelf1{
+    margin: 25rem auto;
+    width: 55%;
+    height: 14rem;
+   }
+
+   .bookshelf2{
+    margin: -25.4rem auto;
+    width: 55%;
+    height: 14rem;
+   }
+
+   .bookshelf3{
+    margin: 25rem auto;
+    width: 55%;
+    height: 14rem;
+   }
+
+   .book {
+    height: 210px;
+    width: 48px;
+  }
+  .book h2 {
+    font-size: 1em;
+    transform: rotate(0.25turn) translateY(-32px);
+  }
+}
+
+@media (min-width:992px) {
+  .bookshelf1{
+    margin: 25rem auto;
+    width: 55%;
+    height: 13rem;
+   }
+
+   .bookshelf2{
+    margin: -25.4rem auto;
+    width: 55%;
+    height: 13rem;
+   }
+
+   .bookshelf3{
+    margin: 25rem auto;
+    width: 55%;
+    height: 13rem;
+   }
+
+  .bookshelf4{
+    display:block;
+    box-sizing: border-box;
+    margin: -25.4rem auto;
+    width: 40%;
+    height: 13rem;
+    border: 10px #553621 solid;
+    overflow: hidden;
+    background-image: linear-gradient(#241909, #2c1e0b 220px, #7e6747 220px, #514029 222px, #514029 222px, #69583f 228px, #514029 228px, #514029 230px);
+  }
+
+   .book {
+    height: 188px;
+    width: 48px;
+  }
+  .book h2 {
+    font-size: 1em;
+    transform: rotate(0.25turn) translateY(-32px);
+  }
+}
+
+@media (min-width:1024px) {
+  .bookshelf1{
+    margin: 15.5rem auto;
+    width: 40%;
+    height: 10rem;
+   }
+
+   .bookshelf2{
+    margin: -16rem auto;
+    width: 40%;
+    height: 10rem;
+   }
+
+   .bookshelf3{
+    margin: 15rem auto;
+    width: 40%;
+    height: 10rem;
+   }
+
+   .bookshelf4{
+    display: none;
+   }
+
+   .book {
+    height: 140px;
+    width: 40px;
+  }
+  .book h2 {
+    font-size: .8em;
+    transform: rotate(0.25turn) translateY(-32px);
   }
 }
 

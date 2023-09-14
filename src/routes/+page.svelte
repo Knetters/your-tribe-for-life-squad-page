@@ -75,4 +75,32 @@
     }
   }
 
+  @media (min-width:992px) {
+    .pingpong{
+      width: 18rem;
+    }
+
+    .plant{
+      width: 30rem;
+      right: -9%;
+      bottom: 2%;
+    }
+  }
+
+  @media (min-width:1024px) {
+    .background{
+    background-image: url("/img/background-desktop.png");
+    }
+
+    .pingpong{
+      width: 12rem;
+    }
+
+    .plant{
+      width: 17rem;
+      right: 5%;
+      bottom: 5%;
+    }
+  }
+
 </style>
