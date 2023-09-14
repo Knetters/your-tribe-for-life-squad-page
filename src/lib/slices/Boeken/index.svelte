@@ -17,23 +17,9 @@
     </div>
 
     <div class="bookshelf2">
-      <!-- {#each slice.items as item (item.slug.text)}
-      <a href={`book/${item.slug[0].text}`}>
-        <div class="book book-{item.color}">
-          <h2>{item.title[0].text}</h2>
-        </div>
-      </a>
-    {/each} -->
       </div>
 
       <div class="bookshelf3">
-        <!-- {#each slice.items as item (item.slug.text)}
-        <a href={`book/${item.slug[0].text}`}>
-          <div class="book book-{item.color}">
-            <h2>{item.title[0].text}</h2>
-          </div>
-        </a>
-      {/each} -->
       </div>
     </div>
 </section>
@@ -59,14 +45,12 @@
   }
 
   .bookshelf3 {
-    /* position: absolute; */
     box-sizing: border-box;
     margin: 13rem auto;
     width: 70%;
     height: 8.5rem;
     border: 10px #553621 solid;
     overflow: hidden;
-    /* z-index: 2; */
     background-image: linear-gradient(#241909, #2c1e0b 220px, #7e6747 220px, #514029 222px, #514029 222px, #69583f 228px, #514029 228px, #514029 230px);
   }
 
@@ -85,14 +69,14 @@
   }
 
   .book-red {
-    background-color: #a13030;
+    background-color: #b24530;
     border-left: 2px solid #7f1b1b;
     border-right: 2px solid #7f1b1b;
     color: black;
   }
 
   .book-blue {
-    background-color: #32609c;
+    background-color: #156C8f;
     border-left: 2px solid #032b75;
     border-right: 2px solid #032b75;
   }
@@ -135,4 +119,52 @@
   a {
     text-decoration: none;
   }
+
+  @media (min-width:390px) {
+   .bookshelf1{
+    margin: 17rem auto;
+    height: 10rem;
+   }
+
+   .bookshelf2{
+    margin: -17.5rem auto;
+    height: 10rem;
+   }
+
+   .bookshelf3{
+    margin: 17rem auto;
+    height: 10rem;
+   }
+
+   .book {
+    height: 145px;
+    width: 30px;
+  }
+}
+
+@media (min-width:768px){
+  .bookshelf1{
+    margin: 19rem auto;
+    width: 60%;
+    height: 13rem;
+   }
+
+   .bookshelf2{
+    margin: -19.5rem auto;
+    width: 60%;
+    height: 13rem;
+   }
+
+   .bookshelf3{
+    margin: 19rem auto;
+    width: 60%;
+    height: 13rem;
+   }
+
+   .book {
+    height: 188px;
+    width: 35px;
+  }
+}
+
 </style>
