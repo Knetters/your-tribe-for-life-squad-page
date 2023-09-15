@@ -7,13 +7,17 @@
       title : data.content[0].text,
       color : data.color
     }
-  </script>
+</script>
+
+<svelte:head>
+  <title>FDND class of {data.content[0].text}</title>
+</svelte:head>
   
-  <section>
+<section>
     
-    <SliceZone slices={data.slices} context={bookContent} {components} />
+  <SliceZone slices={data.slices} context={bookContent} {components} />
   
-  </section>
+</section>
   
-  <style>
-  </style>
+<style>
+</style>
