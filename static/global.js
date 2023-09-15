@@ -24,8 +24,8 @@ canvas.height = canvas.clientHeight;
 let isDrawing = false;
 let lastX = 0;
 let lastY = 0;
-let brushSize = 2; // You can set the desired default brush size
-let brushColor = "#141414"; // Default brush color (black)
+let brushSize = 2;
+let brushColor = "#141414";
 
 function startDrawing(e) {
   isDrawing = true;
@@ -37,7 +37,7 @@ function draw(e) {
   const [x, y] = [e.offsetX, e.offsetY];
 
   // Draw on the client's canvas with circular strokes
-  ctx.lineCap = "round"; // Set the line cap to round for circular strokes
+  ctx.lineCap = "round";
   ctx.beginPath();
   ctx.moveTo(lastX, lastY);
   ctx.lineTo(x, y);
