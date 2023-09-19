@@ -6,11 +6,11 @@
 
 <section>
   <div class="intro-text">
-    <!-- <h1>{data.title[0].text}</h1>
-    <p>{data.content[0].text}</p> -->
-    <h1> FDND Boekenkast</h1>
+    <h1>{data.title[0].text}</h1>
+    <p>{data.content[0].text}</p>
+    <!-- <h1> FDND Boekenkast</h1>
     <p>Klik op een jaarboek en ga terug naar de studententijd.
-    </p>
+    </p> -->
   </div>
 
   <div class="background">
