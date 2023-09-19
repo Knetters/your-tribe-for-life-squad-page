@@ -39,7 +39,7 @@
                   {#if !item.image.url}
                     <img class="yearbook-image" src="/img/placeholder-image.jpg" alt="" />
                   {:else}
-                    <a href="{item.url}">
+                    <a href="{item.url.url}">
                       <img class="yearbook-image" src={item.image.url} alt="mugshot van {item.name[0].text}">
                     </a>
                   {/if}
@@ -62,7 +62,7 @@
                     {#if !item.image.url}
                       <img class="yearbook-image" src="/img/placeholder-image.jpg" alt="" />
                     {:else}
-                      <a href="{item.url}">
+                      <a href="{item.url.url}">
                         <img class="yearbook-image" src={item.image.url} alt="mugshot van {item.name[0].text}">
                       </a>
                     {/if}
@@ -86,7 +86,7 @@
                     {#if !item.image.url}
                       <img class="yearbook-image" src="/img/placeholder-image.jpg" alt="" />
                     {:else}
-                      <a href="{item.url}">
+                      <a href="{item.url.url}">
                         <img class="yearbook-image" src={item.image.url} alt="mugshot van {item.name[0].text}">
                       </a>
                     {/if}
@@ -108,7 +108,7 @@
                     {#if !item.image.url}
                       <img class="yearbook-image" src="/img/placeholder-image.jpg" alt="" />
                     {:else}
-                      <a href="{item.url}">
+                      <a href="{item.url.url}">
                         <img class="yearbook-image" src={item.image.url} alt="mugshot van {item.name[0].text}">
                       </a>
                     {/if}
@@ -133,7 +133,7 @@
                     {#if !item.image.url}
                       <img class="yearbook-image" src="/img/placeholder-image.jpg" alt="" />
                     {:else}
-                      <a href="{item.url}">
+                      <a href="{item.url.url}">
                         <img class="yearbook-image" src={item.image.url} alt="mugshot van {item.name[0].text}">
                       </a>
                     {/if}
@@ -156,7 +156,7 @@
                     {#if !item.image.url}
                       <img class="yearbook-image" src="/img/placeholder-image.jpg" alt="" />
                     {:else}
-                      <a href="{item.url}">
+                      <a href="{item.url.url}">
                         <img class="yearbook-image" src={item.image.url} alt="mugshot van {item.name[0].text}">
                       </a>
                     {/if}
@@ -180,7 +180,7 @@
                     {#if !item.image.url}
                       <img class="yearbook-image" src="/img/placeholder-image.jpg" alt="" />
                     {:else}
-                      <a href="{item.url}">
+                      <a href="{item.url.url}">
                         <img class="yearbook-image" src={item.image.url} alt="mugshot van {item.name[0].text}">
                       </a>
                     {/if}
@@ -210,8 +210,8 @@
             {#if !item.image.url}
               <img class="yearbook-image" src="/img/placeholder-image.jpg" alt="" />
             {:else}
-              <a href="{item.url}">
-                <img class="yearbook-image" src={item.image.url} alt="mugshot van {item.name[0]?.text}">
+              <a href="{item.url.url}">
+                <img class="yearbook-image" src={item.image.url} alt="mugshot van {item.name[0].text}">
               </a>
             {/if}
             {#if item.name && item.name[0]?.text}

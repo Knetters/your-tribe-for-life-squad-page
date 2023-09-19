@@ -14,10 +14,19 @@
 </svelte:head>
   
 <section>
-    
+  <a href="/" rel="prefetch">Terug</a>
   <SliceZone slices={data.slices} context={bookContent} {components} />
   
 </section>
   
 <style>
+  a {
+    position: absolute;
+    padding: 2rem;
+    font-size: 2rem;
+    font-family: 'Caveat', cursive;
+    text-decoration: none;
+    color: black;
+    transform: rotate(-10deg);
+  }
 </style>
