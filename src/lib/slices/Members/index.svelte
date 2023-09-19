@@ -28,7 +28,7 @@
         <label class="book-title" for="checkbox-cover"><span class="title">FDND JAARBOEK</span><br><span class="year">{context.title}</span></label>
       </div>
       <div class="page" id="page1">
-        <div class="front-page">
+        <div class="front-page fp1">
           <!-- Loop through items on the current page -->
 
           <p>FDND laatstejaars studenten {context.title}</p>
@@ -39,7 +39,7 @@
                   {#if !item.image.url}
                     <img class="yearbook-image" src="/img/placeholder-image.jpg" alt="" />
                   {:else}
-                    <a href="{item.url.url}">
+                    <a href="{item.url.url}" target="_blank">
                       <img class="yearbook-image" src={item.image.url} alt="mugshot van {item.name[0].text}">
                     </a>
                   {/if}
@@ -62,7 +62,7 @@
                     {#if !item.image.url}
                       <img class="yearbook-image" src="/img/placeholder-image.jpg" alt="" />
                     {:else}
-                      <a href="{item.url.url}">
+                      <a href="{item.url.url}" target="_blank">
                         <img class="yearbook-image" src={item.image.url} alt="mugshot van {item.name[0].text}">
                       </a>
                     {/if}
@@ -86,7 +86,7 @@
                     {#if !item.image.url}
                       <img class="yearbook-image" src="/img/placeholder-image.jpg" alt="" />
                     {:else}
-                      <a href="{item.url.url}">
+                      <a href="{item.url.url}" target="_blank">
                         <img class="yearbook-image" src={item.image.url} alt="mugshot van {item.name[0].text}">
                       </a>
                     {/if}
@@ -108,7 +108,7 @@
                     {#if !item.image.url}
                       <img class="yearbook-image" src="/img/placeholder-image.jpg" alt="" />
                     {:else}
-                      <a href="{item.url.url}">
+                      <a href="{item.url.url}" target="_blank">
                         <img class="yearbook-image" src={item.image.url} alt="mugshot van {item.name[0].text}">
                       </a>
                     {/if}
@@ -133,7 +133,7 @@
                     {#if !item.image.url}
                       <img class="yearbook-image" src="/img/placeholder-image.jpg" alt="" />
                     {:else}
-                      <a href="{item.url.url}">
+                      <a href="{item.url.url}" target="_blank">
                         <img class="yearbook-image" src={item.image.url} alt="mugshot van {item.name[0].text}">
                       </a>
                     {/if}
@@ -156,7 +156,7 @@
                     {#if !item.image.url}
                       <img class="yearbook-image" src="/img/placeholder-image.jpg" alt="" />
                     {:else}
-                      <a href="{item.url.url}">
+                      <a href="{item.url.url}" target="_blank">
                         <img class="yearbook-image" src={item.image.url} alt="mugshot van {item.name[0].text}">
                       </a>
                     {/if}
@@ -180,7 +180,7 @@
                     {#if !item.image.url}
                       <img class="yearbook-image" src="/img/placeholder-image.jpg" alt="" />
                     {:else}
-                      <a href="{item.url.url}">
+                      <a href="{item.url.url}" target="_blank">
                         <img class="yearbook-image" src={item.image.url} alt="mugshot van {item.name[0].text}">
                       </a>
                     {/if}
@@ -210,7 +210,7 @@
             {#if !item.image.url}
               <img class="yearbook-image" src="/img/placeholder-image.jpg" alt="" />
             {:else}
-              <a href="{item.url.url}">
+              <a href="{item.url.url}" target="_blank">
                 <img class="yearbook-image" src={item.image.url} alt="mugshot van {item.name[0].text}">
               </a>
             {/if}
@@ -227,27 +227,27 @@
 
 <style>
   .red {
-    background-color: #a13030;
+    background-color: var(--red-cover);
   }
 
   .blue {
-    background-color: #32609c;
+    background-color: var(--blue-cover);
   }
 
   .green {
-    background-color: #3a6c51;
+    background-color: var(--green-cover);
   }
 
   .yellow {
-    background-color: #eded80;
+    background-color: var(--yellow-cover);
   }
 
   .purple {
-    background-color: #774194;
+    background-color: var(--purple-cover);
   }
 
   .brown {
-    background-color: #54290c;
+    background-color: var(--brown-cover);
   }
 
   /* Styling grid and yearbook cards */
@@ -265,7 +265,7 @@
     position: relative;
   }
 
-  #page1 .card-item:first-of-type:before {
+  .fp1 .card-item:first-of-type:before {
     content: "Click me!";
     position: absolute;
     font-family: 'Caveat', cursive;
@@ -336,7 +336,7 @@
     z-index: 10;
     text-align: center;
     padding-top: 40vh;
-    color: #a6a16c;
+    color: var(--gold-title-color);
     transition: .2s;
   }
 

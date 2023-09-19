@@ -77,42 +77,42 @@
   }
 
   .book-red {
-    background-color: #b24530;
-    border-left: 2px solid #7f1b1b;
-    border-right: 2px solid #7f1b1b;
+    background-color: var(--red-cover);
+    border-left: 2px solid var(--red-lines);
+    border-right: 2px solid var(--red-lines);
     color: black;
   }
 
   .book-blue {
-    background-color: #156C8f;
-    border-left: 2px solid #032b75;
-    border-right: 2px solid #032b75;
+    background-color: var(--blue-cover);
+    border-left: 2px solid var(--blue-lines);
+    border-right: 2px solid var(--blue-lines);
   }
 
   .book-green {
-    background-color: #3a6c51;
-    border-left: 2px solid #11683a;
-    border-right: 2px solid #11683a;
+    background-color: var(--green-cover);
+    border-left: 2px solid var(--green-lines);
+    border-right: 2px solid var(--green-lines);
   }
 
   .book-yellow {
-    background-color: #eded80;
-    border-left: 2px solid #f0f092;
-    border-right: 2px solid #eaea6e;
+    background-color: var(--yellow-cover);
+    border-left: 2px solid var(--yellow-lines);
+    border-right: 2px solid var(--yellow-lines);
     color: black;
   }
 
   .book-purple {
-    background-color: #774194;
-    border-left: 2px solid #551777;
-    border-right: 2px solid #551777;
+    background-color: var(--purple-cover);
+    border-left: 2px solid var(--purple-lines);
+    border-right: 2px solid var(--purple-lines);
     color: black;
   }
 
   .book-brown {
-    background-color: #54290c;
-    border-left: 2px solid #66320f;
-    border-right: 2px solid #422009;
+    background-color: var(--brown-cover);
+    border-left: 2px solid var(--brown-lines);
+    border-right: 2px solid var(--brown-lines);
   }
 
   .book h2 {
@@ -121,7 +121,7 @@
     transform-origin: 0% 0%;
     transform: rotate(0.25turn) translateY(-24px);
     width: 170px;
-    color: #e7dd71;
+    color: var(--gold-f-color);
   }
 
   a {
