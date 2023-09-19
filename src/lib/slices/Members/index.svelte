@@ -43,7 +43,9 @@
                       <img class="yearbook-image" src={item.image.url} alt="mugshot van {item.name[0].text}">
                     </a>
                   {/if}
-                  <p>{item.name[0].text}</p>
+                  {#if item.name && item.name[0]?.text}
+                    <p>{item.name[0].text}</p>
+                  {/if}
                 </div>
               </div>
             {/each}
@@ -64,7 +66,9 @@
                         <img class="yearbook-image" src={item.image.url} alt="mugshot van {item.name[0].text}">
                       </a>
                     {/if}
-                    <p>{item.name[0].text}</p>
+                    {#if item.name && item.name[0]?.text}
+                      <p>{item.name[0].text}</p>
+                    {/if}
                   </div>
                 </div>
               {/each}
@@ -76,7 +80,7 @@
           <div class="front-page">
             <p>FDND studenten, class of {context.title}</p>
             <div id="card-container" class="container">
-              {#each slice.items.slice(40, 47) as item}
+              {#each slice.items.slice(40, 60) as item}
                 <div class="card-item">
                   <div class="inner-card">
                     {#if !item.image.url}
@@ -86,7 +90,9 @@
                         <img class="yearbook-image" src={item.image.url} alt="mugshot van {item.name[0].text}">
                       </a>
                     {/if}
-                    <p>{item.name[0].text}</p>
+                    {#if item.name && item.name[0]?.text}
+                      <p>{item.name[0].text}</p>
+                    {/if}
                   </div>
                 </div>
               {/each}
@@ -96,7 +102,7 @@
           <div class="back-page">
             <p>FDND studenten, class of {context.title}</p>
             <div id="card-container" class="container">
-              <!-- {#each slice.items.slice(60, 80) as item}
+              {#each slice.items.slice(60, 80) as item}
                 <div class="card-item">
                   <div class="inner-card">
                     {#if !item.image.url}
@@ -106,10 +112,12 @@
                         <img class="yearbook-image" src={item.image.url} alt="mugshot van {item.name[0].text}">
                       </a>
                     {/if}
-                    <p>{item.name[0].text}</p>
+                    {#if item.name && item.name[0]?.text}
+                      <p>{item.name[0].text}</p>
+                    {/if}
                   </div>
                 </div>
-              {/each} -->
+              {/each}
             </div>
             
               <label class="prev" for="checkbox-page2">Terug</label>
@@ -119,7 +127,7 @@
         <div class="front-page">
           <p>FDND studenten, class of {context.title}</p>
             <div id="card-container" class="container">
-              <!-- {#each slice.items.slice(80, 100) as item}
+              {#each slice.items.slice(80, 100) as item}
                 <div class="card-item">
                   <div class="inner-card">
                     {#if !item.image.url}
@@ -129,10 +137,12 @@
                         <img class="yearbook-image" src={item.image.url} alt="mugshot van {item.name[0].text}">
                       </a>
                     {/if}
-                    <p>{item.name[0].text}</p>
+                    {#if item.name && item.name[0]?.text}
+                      <p>{item.name[0].text}</p>
+                    {/if}
                   </div>
                 </div>
-              {/each} -->
+              {/each}
             </div>
             
             <label class="next" for="checkbox-page3">Verder</label>
@@ -140,7 +150,7 @@
         <div class="back-page">
           <p>FDND studenten, class of {context.title}</p>
             <div id="card-container" class="container">
-              <!-- {#each slice.items.slice(100, 120) as item}
+              {#each slice.items.slice(100, 120) as item}
                 <div class="card-item">
                   <div class="inner-card">
                     {#if !item.image.url}
@@ -150,10 +160,12 @@
                         <img class="yearbook-image" src={item.image.url} alt="mugshot van {item.name[0].text}">
                       </a>
                     {/if}
-                    <p>{item.name[0].text}</p>
+                    {#if item.name && item.name[0]?.text}
+                      <p>{item.name[0].text}</p>
+                    {/if}
                   </div>
                 </div>
-              {/each} -->
+              {/each}
             </div>
             <label class="prev" for="checkbox-page3">Terug</label>
         </div>
@@ -162,7 +174,7 @@
           <div class="front-page">
             <p>FDND studenten, class of {context.title}</p>
             <div id="card-container" class="container">
-              <!-- {#each slice.items.slice(120, 140) as item}
+              {#each slice.items.slice(120, 140) as item}
                 <div class="card-item">
                   <div class="inner-card">
                     {#if !item.image.url}
@@ -172,10 +184,12 @@
                         <img class="yearbook-image" src={item.image.url} alt="mugshot van {item.name[0].text}">
                       </a>
                     {/if}
-                    <p>{item.name[0].text}</p>
+                    {#if item.name && item.name[0]?.text}
+                      <p>{item.name[0].text}</p>
+                    {/if}
                   </div>
                 </div>
-              {/each} -->
+              {/each}
             </div>
               
           </div>
@@ -251,7 +265,7 @@
     position: relative;
   }
 
-  .card-item:first-of-type:before {
+  #page1 .card-item:first-of-type:before {
     content: "Click me!";
     position: absolute;
     font-family: 'Caveat', cursive;

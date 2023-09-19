@@ -127,7 +127,7 @@
       top: 48vh;
       left: 3vw;
       font-family: 'Caveat', cursive;
-      font-size: 1.8vw;
+      font-size: 1.6vw;
       transform: rotate(-10deg);
   }
   }
