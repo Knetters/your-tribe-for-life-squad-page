@@ -6,8 +6,11 @@
 
 <section>
   <div class="intro-text">
-    <h1>{data.title[0].text}</h1>
-    <p>{data.content[0].text}</p>
+    <!-- <h1>{data.title[0].text}</h1>
+    <p>{data.content[0].text}</p> -->
+    <h1> FDND Boekenkast</h1>
+    <p>Klik op een jaarboek en ga terug naar de studententijd.
+    </p>
   </div>
 
   <div class="background">
@@ -23,6 +26,8 @@
 </section>
 
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&display=swap');
+  
   .background{
     position: relative;
     height: 100vh;
@@ -34,13 +39,23 @@
   }
 
   .intro-text {
+    max-width: 13rem;
     position: absolute;
     z-index: 10;
-    font-size: 4.5vw;
-    font-family: 'Caveat', cursive;
-    top: 10vh;
-    left: 50%;
-    transform: translateX(-50%) rotate(-10deg);
+    top: 33vh;
+    left: 15%;
+    color: rgb(121, 121, 121);
+    /* transform: translateX(-50%) rotate(-10deg); */
+  }
+
+  .intro-text h1 {
+    font-family: 'Amaranth';
+    font-size: 1.6rem;
+  }
+
+  .intro-text p {
+    font-family: 'Caveat';
+    font-size: 1.3rem;
   }
 
   h1, p {
@@ -50,7 +65,7 @@
 
   .pingpong{
     position: absolute;
-    width: 8.5rem;
+    width: 8rem;
     height: auto;
     bottom: 2%;
     left: 6%;
@@ -59,7 +74,7 @@
 
   .plant{
     position: absolute;
-    width: 14rem;
+    width: 12rem;
     height: auto;
     bottom: 5%;
     right: -17%;
@@ -90,6 +105,23 @@
       width: 22rem;
       right: -10%;
     }
+
+    .intro-text {
+      max-width: 20rem;
+      position: absolute;
+      z-index: 10;
+      top: 30vh;
+      left: 20vw;
+      font-family: 'Amaranth', sans-serif;
+  }
+  .intro-text h1 {
+    font-size: 2rem;
+  }
+
+  .intro-text p {
+    font-size: 1.8rem;
+  }
+
   }
 
   @media (min-width:992px) {
@@ -122,15 +154,24 @@
     }
 
     .intro-text {
+      max-width: 20rem;
       position: absolute;
       z-index: 10;
-      top: 48vh;
-      left: 3vw;
-      font-family: 'Caveat', cursive;
-      font-size: 1.6vw;
-      transform: rotate(-10deg);
+      top: 44vh;
+      left: 6vw;
+      font-family: 'Amaranth', sans-serif;
+      /* transform: rotate(-10deg); */
   }
+
+  .intro-text h1 {
+    font-size: 2.5rem;
   }
+
+  .intro-text p {
+    font-size: 2rem;
+  }
+}
+
 /* 
   @media (min-width:1400px) {
     .pingpong{

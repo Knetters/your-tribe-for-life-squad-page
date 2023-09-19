@@ -30,7 +30,7 @@
 <style>
   .bookshelf1 {
     box-sizing: border-box;
-    margin: 13rem auto;
+    margin: 21rem auto;
     width: 70%;
     border: 10px #553621 solid;
     overflow: hidden;
@@ -39,7 +39,7 @@
 
   .bookshelf2 {
     box-sizing: border-box;
-    margin: -13.6rem auto;
+    margin: -21.5rem auto;
     width: 70%;
     height: 8.5rem;
     border: 10px #553621 solid;
@@ -48,13 +48,14 @@
   }
 
   .bookshelf3 {
-    box-sizing: border-box;
+    display: none;
+    /* box-sizing: border-box;
     margin: 13rem auto;
     width: 70%;
     height: 8.5rem;
     border: 10px #553621 solid;
     overflow: hidden;
-    background-image: linear-gradient(#241909, #2c1e0b 220px, #7e6747 220px, #514029 222px, #514029 222px, #69583f 228px, #514029 228px, #514029 230px);
+    background-image: linear-gradient(#241909, #2c1e0b 220px, #7e6747 220px, #514029 222px, #514029 222px, #69583f 228px, #514029 228px, #514029 230px); */
   }
 
   .bookshelf4{
@@ -130,17 +131,12 @@
 
   @media (min-width:390px) {
    .bookshelf1{
-    margin: 17rem auto;
+    margin: 25rem auto;
     height: 10rem;
    }
 
    .bookshelf2{
-    margin: -17.5rem auto;
-    height: 10rem;
-   }
-
-   .bookshelf3{
-    margin: 17rem auto;
+    margin: -25.5rem auto;
     height: 10rem;
    }
 
@@ -152,25 +148,31 @@
 
 @media (min-width:768px){
   .bookshelf1{
-    margin: 19rem auto;
+    margin: 28rem auto;
     width: 60%;
-    height: 13rem;
+    height: 10rem;
    }
 
    .bookshelf2{
-    margin: -19.5rem auto;
+    margin: -28.5rem auto;
     width: 60%;
-    height: 13rem;
+    height: 10rem;
    }
 
    .bookshelf3{
-    margin: 19rem auto;
+    display:block;
+    box-sizing: border-box;
+    border: 10px #553621 solid;
+    overflow: hidden;
+    background-image: linear-gradient(#241909, #2c1e0b 220px, #7e6747 220px, #514029 222px, #514029 222px, #69583f 228px, #514029 228px, #514029 230px);
+    z-index: 10;
+    margin: 28rem auto;
     width: 60%;
-    height: 13rem;
+    height: 10rem;
    }
 
    .book {
-    height: 188px;
+    height: 150px;
     width: 35px;
   }
 }
