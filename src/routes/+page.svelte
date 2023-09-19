@@ -5,8 +5,10 @@
 </script>
 
 <section>
-  <!-- <h1>{data.title[0].text}</h1>
-  <p>{data.content[0].text}</p> -->
+  <div class="intro-text">
+    <h1>{data.title[0].text}</h1>
+    <p>{data.content[0].text}</p>
+  </div>
 
   <div class="background">
 
@@ -29,6 +31,21 @@
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
+  }
+
+  .intro-text {
+    position: absolute;
+    z-index: 10;
+    font-size: 4.5vw;
+    font-family: 'Caveat', cursive;
+    top: 10vh;
+    left: 50%;
+    transform: translateX(-50%) rotate(-10deg);
+  }
+
+  h1, p {
+    margin: 0;
+    padding: 0;
   }
 
   .pingpong{
@@ -103,6 +120,16 @@
       right: 5%;
       bottom: 5%;
     }
+
+    .intro-text {
+      position: absolute;
+      z-index: 10;
+      top: 48vh;
+      left: 3vw;
+      font-family: 'Caveat', cursive;
+      font-size: 1.8vw;
+      transform: rotate(-10deg);
+  }
   }
 /* 
   @media (min-width:1400px) {
