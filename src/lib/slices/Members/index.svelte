@@ -251,6 +251,18 @@
     position: relative;
   }
 
+  .card-item:first-of-type:before {
+    content: "Click me!";
+    position: absolute;
+    font-family: 'Caveat', cursive;
+    left: 0;
+    top: 0;
+    transform: rotate(-30deg);
+    font-size: 1.4vw;
+    margin-top: -.5rem;
+    margin-left: -1rem;
+}
+
   .card-item {
     margin: .35%;
     height: 18vh;
