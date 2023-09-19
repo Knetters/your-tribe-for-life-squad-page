@@ -14,19 +14,22 @@
 </svelte:head>
   
 <section>
-  <a href="/" rel="prefetch">Terug</a>
+  <button onclick="goBack()">Terug</button>
   <SliceZone slices={data.slices} context={bookContent} {components} />
   
 </section>
   
 <style>
-  a {
+  button {
     position: absolute;
-    padding: 2rem;
+    margin: 2rem;
     font-size: 2rem;
     font-family: 'Caveat', cursive;
     text-decoration: none;
     color: black;
     transform: rotate(-10deg);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
   }
 </style>

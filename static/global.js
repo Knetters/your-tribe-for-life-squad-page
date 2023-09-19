@@ -1,3 +1,7 @@
+function goBack() {
+  window.location.href="/";
+}
+
 function toggleDraw() {
   var canvas = document.getElementById("drawing-canvas");
   
