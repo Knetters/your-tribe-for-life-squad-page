@@ -328,7 +328,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f1ecdd;
+    background-color: #cccccc;
     overflow-y: hidden;
   }
 
