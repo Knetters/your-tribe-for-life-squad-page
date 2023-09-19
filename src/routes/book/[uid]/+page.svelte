@@ -26,7 +26,7 @@
     font-size: 2rem;
     font-family: 'Caveat', cursive;
     text-decoration: none;
-    color: black;
+    color: rgb(94, 94, 94);
     transform: rotate(-10deg);
     border: none;
     background-color: transparent;

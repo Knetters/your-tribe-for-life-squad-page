@@ -44,7 +44,7 @@
     z-index: 10;
     top: 33vh;
     left: 15%;
-    color: rgb(121, 121, 121);
+    color: rgb(94, 94, 94);
     /* transform: translateX(-50%) rotate(-10deg); */
   }
 
