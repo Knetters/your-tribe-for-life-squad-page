@@ -1,6 +1,5 @@
 # FDND Boekenkast
-
-<img width="1678" alt="Screenshot 2023-09-20 at 14 59 51" src="https://github.com/sannevanseeventer/your-tribe-for-life-squad-page/assets/60781257/ac23b05d-1987-4a8a-a963-5a89c2659ca9">
+![205](https://github.com/sannevanseeventer/your-tribe-for-life-squad-page/assets/112857444/8616ed6a-863f-41b5-a37d-cce433194589)
 
 ## Inhoudsopgave
 
