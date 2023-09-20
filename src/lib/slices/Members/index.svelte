@@ -256,6 +256,7 @@
     padding: 0;
     text-align: center;
     margin-bottom: 1rem;
+    font-family: 'Helvetica';
   }
 
   .container {
@@ -439,6 +440,7 @@
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    font-family: Helvetica, sans-serif;
   }
 
   .next {
