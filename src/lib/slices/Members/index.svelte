@@ -569,7 +569,7 @@
 
     .card-item {
       margin: 0.5%; /* Adjusted margin for better spacing */
-      height: 18vh;
+      height: 22vh;
       flex: 0 1 calc(25% - 1%); /* 25% width for each card item */
       width: calc(25% - 1%);
     }

@@ -8,9 +8,6 @@
   <div class="intro-text">
     <h1>{data.title[0].text}</h1>
     <p>{data.content[0].text}</p>
-    <!-- <h1> FDND Boekenkast</h1>
-    <p>Klik op een jaarboek en ga terug naar de studententijd.
-    </p> -->
   </div>
 
   <div class="background">
@@ -45,7 +42,6 @@
     top: 33vh;
     left: 15%;
     color: rgb(94, 94, 94);
-    /* transform: translateX(-50%) rotate(-10deg); */
   }
 
   .intro-text h1 {
