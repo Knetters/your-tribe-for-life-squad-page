@@ -1,5 +1,5 @@
 # FDND Boekenkast
-![205](https://github.com/sannevanseeventer/your-tribe-for-life-squad-page/assets/112857444/8616ed6a-863f-41b5-a37d-cce433194589)
+![205](https://github.com/sannevanseeventer/your-tribe-for-life-squad-page/assets/112857444/7fbc8c69-219a-4bc6-b763-25defee3faa4)
 
 ## Inhoudsopgave
 
