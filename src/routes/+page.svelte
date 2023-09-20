@@ -134,7 +134,7 @@
 
   @media (min-width:1024px) {
     .background{
-    background-image: url("/img/background-desktop2.png");
+    background-image: url("/img/bg-desktop.webp");
     }
 
     .pingpong{
