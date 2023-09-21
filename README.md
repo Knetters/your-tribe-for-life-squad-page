@@ -23,8 +23,8 @@ Fork dit project. In de root type je `npm install` om alle packages te installer
 Klik op het jaarboek in de boekenkast waarvan je de studenten wil bekijken. Blader door het boek heen om op iedere pagina de studenten van dat examenjaar te zien.
 
 ## Bronnen
-[Prismic en SvelteKit docs](https://prismic.io/docs/svelte)
-[Sveltekit Crash Course](https://www.youtube.com/watch?v=9OlLxkaeVvw&list=PL4cUxeGkcC9hpM9ARM59Ve3jqcb54dqiP)
+* [Prismic en SvelteKit docs](https://prismic.io/docs/svelte)
+* [Sveltekit Crash Course](https://www.youtube.com/watch?v=9OlLxkaeVvw&list=PL4cUxeGkcC9hpM9ARM59Ve3jqcb54dqiP)
 
 ## Licentie
 ![GNU GPL V3](https://www.gnu.org/graphics/gplv3-127x51.png)
