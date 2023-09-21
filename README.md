@@ -24,7 +24,7 @@ Klik op het jaarboek in de boekenkast waarvan je de studenten wil bekijken. Blad
 
 ## Bronnen
 [Prismic en SvelteKit docs](https://prismic.io/docs/svelte)
-[Sveltekit Crashcourse] (https://www.youtube.com/watch?v=9OlLxkaeVvw&list=PL4cUxeGkcC9hpM9ARM59Ve3jqcb54dqiP)
+[Sveltekit Crash Course](https://www.youtube.com/watch?v=9OlLxkaeVvw&list=PL4cUxeGkcC9hpM9ARM59Ve3jqcb54dqiP)
 
 ## Licentie
 ![GNU GPL V3](https://www.gnu.org/graphics/gplv3-127x51.png)
